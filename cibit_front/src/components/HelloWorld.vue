@@ -1,32 +1,35 @@
 <template>
-<!--  <div class="topMenu" >-->
-<!--    <el-menu-->
-<!--      :default-active="activeIndex2"-->
-<!--      class="el-menu-demo"-->
-<!--      mode="horizontal"-->
-<!--      @select="handleSelect"-->
-<!--      background-color="#545c64"-->
-<!--      text-color="#fff"-->
-<!--      active-text-color="#ffd04b">-->
-<!--      <el-menu-item index="1">处理中心</el-menu-item>-->
-<!--      <el-submenu index="2">-->
-<!--        <template slot="title">我的工作台</template>-->
-<!--        <el-menu-item index="2-1">选项1</el-menu-item>-->
-<!--        <el-menu-item index="2-2">选项2</el-menu-item>-->
-<!--        <el-menu-item index="2-3">选项3</el-menu-item>-->
-<!--        <el-submenu index="2-4">-->
-<!--          <template slot="title">选项4</template>-->
-<!--          <el-menu-item index="2-4-1">选项1</el-menu-item>-->
-<!--          <el-menu-item index="2-4-2">选项2</el-menu-item>-->
-<!--          <el-menu-item index="2-4-3">选项3</el-menu-item>-->
-<!--        </el-submenu>-->
-<!--      </el-submenu>-->
-<!--      <el-menu-item index="3" disabled>消息中心</el-menu-item>-->
-<!--      <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>-->
-<!--    </el-menu>-->
-<!--  </div>-->
+
 
   <el-container>
+<!--    //菜单导航栏-->
+    <div class="topMenu" >
+      <el-menu
+        :default-active="activeIndex2"
+        class="el-menu-demo"
+        mode="horizontal"
+        @select="handleSelect"
+        background-color="#545c64"
+        text-color="#fff"
+        active-text-color="#ffd04b">
+        <el-menu-item index="1">处理中心</el-menu-item>
+        <el-submenu index="2">
+          <template slot="title">我的工作台</template>
+          <el-menu-item index="2-1">选项1</el-menu-item>
+          <el-menu-item index="2-2">选项2</el-menu-item>
+          <el-menu-item index="2-3">选项3</el-menu-item>
+          <el-submenu index="2-4">
+            <template slot="title">选项4</template>
+            <el-menu-item index="2-4-1">选项1</el-menu-item>
+            <el-menu-item index="2-4-2">选项2</el-menu-item>
+            <el-menu-item index="2-4-3">选项3</el-menu-item>
+          </el-submenu>
+        </el-submenu>
+        <el-menu-item index="3" disabled>消息中心</el-menu-item>
+        <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>
+        <el-menu-item index="5" style="position: absolute;left: 90%;"><div class="el-icon-user-solid" style="font-size: 40px"></div></el-menu-item>
+      </el-menu>
+    </div>
     <!--  //最上面的一行表头-->
     <el-header class="topestheader" style="height: 120px;Float:left;">
       <el-image
@@ -41,25 +44,35 @@
 
 
       </div>
-      <div class="el-icon-user-solid" style="
-    position: absolute;
-    font-size: 40px;
-    left: 90%;
-    top: 40px;"></div>
-
 
     </el-header>
 
     <el-container>
       <!--      //左侧的部分-->
-      <el-aside class="firstAside">
-        <el-container>
+      <el-aside style="background-color: red;height: 800px">
+        <el-container style="background-color: chocolate;height: 800px">
+          <el-header style="font-size: 20px; padding: 3%;height: 50px">应用推荐</el-header>
 
-          <el-header class="secendheader" style="font-size: 30px;">应用推荐</el-header>
-          <el-main>Main</el-main>
-          <el-footer>Footer</el-footer>
+          <el-main class="lm" style="background-color: #E9EEF3;height: 100px">
+<!--            <el-row style="height: 80px" >-->
+
+                <el-button class="lbotton" round>现货分析</el-button>
+                <el-button class="lbotton" round>智能决策</el-button>
+                <el-button class="lbotton" round>aaaa</el-button>
+                <el-button class="lbotton" round>bbbbb</el-button>
+
+
+<!--            </el-row>-->
+          </el-main>
+
+          <el-footer style="background-color: #2c3e50;height: 250px;padding: 0">
+            <el-container style="height: 250px">
+              <el-header style="text-align: right;background-color: #99bfa5;height: 25px;width: 100%">热点观察</el-header>
+              <el-main style="background-color: crimson;overflow: auto;">some text</el-main>
+            </el-container>
+          </el-footer>
+
         </el-container>
-
       </el-aside>
       <!--      右下主要的部分-->
       <el-main>
@@ -159,6 +172,12 @@
 </script>
 
 <style scoped>
+  .lbotton{
+    float: left;
+    /*clear: both;*/
+    padding: 0;
+    width: 100%;
+  }
   .erjiMenu{
 
     background-color: #E9EEF3;
