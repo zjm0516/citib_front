@@ -12,22 +12,12 @@
         background-color="#545c64"
         text-color="#fff"
         active-text-color="#ffd04b">
-        <el-menu-item index="1">处理中心</el-menu-item>
-        <el-submenu index="2">
-          <template slot="title">我的工作台</template>
-          <el-menu-item index="2-1">选项1</el-menu-item>
-          <el-menu-item index="2-2">选项2</el-menu-item>
-          <el-menu-item index="2-3">选项3</el-menu-item>
-          <el-submenu index="2-4">
-            <template slot="title">选项4</template>
-            <el-menu-item index="2-4-1">选项1</el-menu-item>
-            <el-menu-item index="2-4-2">选项2</el-menu-item>
-            <el-menu-item index="2-4-3">选项3</el-menu-item>
-          </el-submenu>
-        </el-submenu>
-        <el-menu-item index="3" disabled>消息中心</el-menu-item>
-        <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>
-        <el-menu-item index="5" style="position: absolute;left: 90%;"><div class="el-icon-user-solid" style="font-size: 40px"></div></el-menu-item>
+        <el-menu-item index="1">首页</el-menu-item>
+        <el-menu-item index="2">看盘</el-menu-item>
+
+        <el-menu-item index="3" >资讯</el-menu-item>
+        <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">服务</a></el-menu-item>
+        <el-menu-item index="5" style="position: absolute;left: 90%;"><div class="el-icon-user-solid" style="font-size: 40px"></div>我的</el-menu-item>
       </el-menu>
     </div>
     <!--  //最上面的一行表头-->
@@ -92,7 +82,10 @@
           <!--          //右下的主要不服-->
           <el-main class="secondmain" >
             <div v-show="CarbonTrading">
-              <el-tag type="danger">标签1</el-tag>
+              <el-button @click="sayhello" >
+                hello
+              </el-button>
+              <a id="demo" value="test"></a>
             </div>
             <div v-show="Carbonfinance">
               <el-tag type="danger">标签2</el-tag>
@@ -128,7 +121,8 @@
         CarbonTrading:true,
         Carbonfinance:false,
         Policiesandregulations:false,
-        Watchtoday:false
+        Watchtoday:false,
+        test:0
 
       }
     },
@@ -138,6 +132,17 @@
       },
       handleSelect(key, keyPath) {
         console.log(key, keyPath);
+      },
+      sayhello(){
+        this.$axios.get("/hello").then(res=>{
+          document.getElementById("demo").innerHTML=res.hello;
+          }
+
+
+
+        )
+
+
       },
       changeToCarbonTrading()
       {
