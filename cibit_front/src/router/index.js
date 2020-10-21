@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
-import Consult from  '@/components/Consult'
+import realTimeInfo from  '@/components/realTimeInfo'
 import Kanpan from  '@/components/Kanpan'
 import Login from  '@/components/Login'
 import Service from  '@/components/Service'
@@ -16,9 +16,9 @@ export default new Router({
       component: HelloWorld
     },
     {
-      path: '/Consult',
-      name: 'Consult',
-      component: Consult
+      path: '/realTimeInfo',
+      name: 'realTimeInfo',
+      component: realTimeInfo
     },
     {
       path: '/Kanpan',
