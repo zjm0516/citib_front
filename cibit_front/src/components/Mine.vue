@@ -28,7 +28,7 @@
     export default {
         name: "Mine" ,
         data(){
-
+          return{}
 
         },
       //mounted指的是在你加载界面的时候调用的函数，函数定义还是写在methods中
@@ -39,6 +39,21 @@
 
       //一般的方法写在这里
         methods:{
+          changeToHomePage(){
+            this.$router.push({ path: '/' })
+          },
+          changeToKanpan(){
+            this.$router.push({ path: '/Kanpan' })
+          },
+          changeTorealTimeInfo(){
+            this.$router.push({ path: '/realTimeInfo' })
+          },
+          changeToService(){
+            this.$router.push({ path: '/Service' })
+          },
+          changeToMine(){
+            this.$router.push({ path: '/Mine' })
+          },
 
         },
       watch:{

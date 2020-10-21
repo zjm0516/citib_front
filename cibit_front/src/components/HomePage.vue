@@ -12,12 +12,14 @@
         background-color="#545c64"
         text-color="#fff"
         active-text-color="#ffd04b">
-        <el-menu-item index="1">首页</el-menu-item>
-        <el-menu-item index="2">看盘</el-menu-item>
-
-        <el-menu-item index="3" >资讯</el-menu-item>
-        <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">服务</a></el-menu-item>
-        <el-menu-item index="5" style="position: absolute;left: 90%;"><div class="el-icon-user-solid" style="font-size: 40px"></div>我的</el-menu-item>
+        <!--        //为每个界面写跳转-->
+        <el-menu-item index="1"@click="changeToHomePage">首页</el-menu-item>
+        <el-menu-item index="2" @click="changeToKanpan">看盘</el-menu-item>
+        <el-menu-item index="3" @click="changeTorealTimeInfo">资讯</el-menu-item>
+        <el-menu-item index="4" @click="changeToService">服务</el-menu-item>
+        <el-menu-item index="5"  @click="changeToMine" style="position: absolute;left: 90%;">我的</el-menu-item>
+        <!--        //原来我的的格式，带小人的。-->
+        <!--        <div class="el-icon-user-solid" style="font-size: 40px"></div>-->
       </el-menu>
     </div>
     <!--  //最上面的一行表头-->
@@ -26,7 +28,7 @@
         style="width: 100px; height: 100px;top: 10px;
     left: -40%"
         :src=url
-        :fit=fit></el-image>
+        :fit=fits></el-image>
       <div class="floatput"  style="Float:left;height:60px;margin-top: -4%;">
 
         <el-input v-model="SearchParam" placeholder="请输入查询字段" style=" width:300px"></el-input>
@@ -170,6 +172,21 @@
         this.Carbonfinance=false;
         this.Policiesandregulations=false;
         this.Watchtoday=true
+      },
+      changeToHomePage(){
+        this.$router.push({ path: '/' })
+      },
+      changeToKanpan(){
+        this.$router.push({ path: '/Kanpan' })
+      },
+      changeTorealTimeInfo(){
+        this.$router.push({ path: '/realTimeInfo' })
+      },
+      changeToService(){
+        this.$router.push({ path: '/Service' })
+      },
+      changeToMine(){
+        this.$router.push({ path: '/Mine' })
       },
 
     }

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import HomePage from '@/components/HomePage'
 import realTimeInfo from  '@/components/realTimeInfo'
 import Kanpan from  '@/components/Kanpan'
 import Login from  '@/components/Login'
@@ -12,8 +12,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'HomePage',
+      component: HomePage
     },
     {
       path: '/realTimeInfo',
