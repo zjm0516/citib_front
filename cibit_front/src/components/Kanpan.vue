@@ -23,7 +23,24 @@
 
 <script>
     export default {
-        name: "Kanpan"
+        name: "Kanpan",
+     data(){
+
+
+    },
+    //mounted指的是在你加载界面的时候调用的函数，函数定义还是写在methods中
+    mounted(){
+
+    },
+    // watch是指当界面有变化的时候，执行的函数
+
+    //一般的方法写在这里
+    methods:{
+
+    },
+    watch:{
+
+    },
     }
 </script>
 
