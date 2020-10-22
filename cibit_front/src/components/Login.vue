@@ -22,31 +22,39 @@
       }
     },
     methods:{
-      submit: function(){
-        this.$message('111');
-/*      if (this.username=="" || this.password==""){
+      submit(){
+        if (this.username=="" || this.password==""){
           this.$message.error({
             message: '用户名和密码不能为空！',
             center:true
+          });}
+        else {
+          this.$axios.post("/login", {username: this.username, password: this.password})
+            .then(res =>{
+              if (res.result) {
+                this.$message.success("登陆成功");
+                this.$router.push({path: '/'});
+              } else {
+                this.$message.error({
+                  message: res.message,
+                  center: true
+                })}
+            })
+            .catch(function (error) {
+            console.log(error);
           });
-        }
-        else if(用户名不存在){
-          this.$message.error({
-            message:'用户不存在！',
-            center:true
-          })
-        }
-        else if(密码不匹配){
-          this.$message.error({
-            message:'用户名或密码错误！',
-            center:true
-          })
-        else if(登录成功){
 
-          }*/
+
+        }
+
+
       }
-    }
-}
+    },
+  }
+
+
+
+
 </script>
 
 <style>

@@ -3,12 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="36cb6162-7692-4abb-b799-e0974ef507a4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cibit_front/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cibit_front/src/components/HomePage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cibit_front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/cibit_front/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cibit_front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cibit_front/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cibit_front/src/components/Kanpan.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cibit_front/src/components/Kanpan.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cibit_front/src/components/Mine.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cibit_front/src/components/Mine.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cibit_front/src/components/Service.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cibit_front/src/components/Service.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cibit_front/src/components/realTimeInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cibit_front/src/components/realTimeInfo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cibit_front/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cibit_front/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cibit_front/src/components/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cibit_front/src/components/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cibit_front/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/cibit_front/src/main.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,6 +15,20 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
@@ -25,8 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cibit_front/src/components/HomePage.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+            <state relative-caret-position="287">
+              <caret line="188" column="44" lean-forward="true" selection-start-line="188" selection-start-column="20" selection-end-line="188" selection-end-column="44" />
               <folding>
                 <element signature="n#style#0;n#el-menu-item#4;n#el-menu#0;n#div#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#el-header#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
@@ -52,11 +65,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cibit_front/src/components/Login.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1587">
-              <caret line="69" column="8" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="8" />
+            <state relative-caret-position="69">
+              <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+              <folding>
+                <element signature="e#636#709#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -64,7 +80,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cibit_front/src/components/realTimeInfo.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
+            <state relative-caret-position="690">
               <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
               <folding>
                 <element signature="n#style#0;n#el-menu-item#4;n#el-menu#0;n#div#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
@@ -73,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cibit_front/src/components/Service.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="41" column="27" lean-forward="true" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+            <state relative-caret-position="943">
+              <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
               <folding>
                 <element signature="n#style#0;n#el-menu-item#4;n#el-menu#0;n#div#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
               </folding>
@@ -88,10 +104,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cibit_front/src/components/Kanpan.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="12" />
+            <state relative-caret-position="5313">
+              <caret line="231" column="48" selection-start-line="231" selection-start-column="48" selection-end-line="231" selection-end-column="48" />
               <folding>
                 <element signature="n#style#0;n#el-menu-item#4;n#el-menu#0;n#div#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#el-header#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#ul#0;n#el-header#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#el-main#0;n#el-container#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -100,7 +119,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cibit_front/src/components/Mine.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
+            <state relative-caret-position="690">
               <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
               <folding>
                 <element signature="n#style#0;n#el-menu-item#4;n#el-menu#0;n#div#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
@@ -133,8 +152,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cibit_front/src/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+            <state relative-caret-position="253">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#142#171#0" expanded="true" />
@@ -186,15 +205,16 @@
         <option value="$PROJECT_DIR$/cibit_front/config/dev.env.js" />
         <option value="$PROJECT_DIR$/cibit_front/src/App.vue" />
         <option value="$PROJECT_DIR$/cibit_front/config/index.js" />
-        <option value="$PROJECT_DIR$/cibit_front/src/main.js" />
         <option value="$PROJECT_DIR$/cibit_front/src/components/HelloWorld.vue" />
         <option value="$PROJECT_DIR$/cibit_front/src/components/Consult.vue" />
         <option value="$PROJECT_DIR$/cibit_front/src/router/index.js" />
         <option value="$PROJECT_DIR$/cibit_front/src/components/HomePage.vue" />
-        <option value="$PROJECT_DIR$/cibit_front/src/components/Kanpan.vue" />
         <option value="$PROJECT_DIR$/cibit_front/src/components/Mine.vue" />
         <option value="$PROJECT_DIR$/cibit_front/src/components/realTimeInfo.vue" />
         <option value="$PROJECT_DIR$/cibit_front/src/components/Service.vue" />
+        <option value="$PROJECT_DIR$/cibit_front/src/main.js" />
+        <option value="$PROJECT_DIR$/cibit_front/src/components/Kanpan.vue" />
+        <option value="$PROJECT_DIR$/cibit_front/src/components/Login.vue" />
       </list>
     </option>
   </component>
@@ -205,8 +225,8 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="65" />
-    <option name="y" value="30" />
+    <option name="x" value="60" />
+    <option name="y" value="335" />
     <option name="width" value="1750" />
     <option name="height" value="745" />
   </component>
@@ -217,7 +237,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -266,6 +285,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -324,7 +344,10 @@
       <workItem from="1603158452033" duration="5393000" />
       <workItem from="1603191444102" duration="11225000" />
       <workItem from="1603238268790" duration="4437000" />
-      <workItem from="1603287382345" duration="1463000" />
+      <workItem from="1603287382345" duration="4925000" />
+      <workItem from="1603323863796" duration="2586000" />
+      <workItem from="1603348807676" duration="5248000" />
+      <workItem from="1603357338791" duration="3316000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1602219078709</created>
@@ -403,11 +426,18 @@
       <option name="project" value="LOCAL" />
       <updated>1603242816062</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="添加">
+      <created>1603288871117</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1603288871117</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47871000" />
+    <option name="totallyTimeSpent" value="62483000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -422,7 +452,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25134048" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16018766" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="JRebel" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -437,8 +467,8 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932975" weight="0.3286119" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.09383378" side_tool="true" visible="true" weight="0.22379604" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.9061662" visible="true" weight="0.22379604" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.19571045" side_tool="true" visible="true" weight="0.16005665" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.8042895" visible="true" weight="0.16005665" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49798927" weight="0.38101983" />
@@ -451,7 +481,7 @@
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.26541555" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
@@ -539,10 +569,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cibit_front/src/components/Login.vue">
+    <entry file="file://$PROJECT_DIR$/cibit_front/src/components/realTimeInfo.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1587">
-          <caret line="69" column="8" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="8" />
+        <state relative-caret-position="690">
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#0;n#el-menu-item#4;n#el-menu#0;n#div#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cibit_front/src/components/Service.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="943">
+          <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#el-menu-item#4;n#el-menu#0;n#div#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cibit_front/src/components/Kanpan.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5313">
+          <caret line="231" column="48" selection-start-line="231" selection-start-column="48" selection-end-line="231" selection-end-column="48" />
+          <folding>
+            <element signature="n#style#0;n#el-menu-item#4;n#el-menu#0;n#div#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-header#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#el-header#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-main#0;n#el-container#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cibit_front/src/components/Mine.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#el-menu-item#4;n#el-menu#0;n#div#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -563,17 +629,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cibit_front/src/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cibit_front/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        <state relative-caret-position="253">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#142#171#0" expanded="true" />
@@ -581,10 +640,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cibit_front/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cibit_front/src/components/HomePage.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+        <state relative-caret-position="287">
+          <caret line="188" column="44" lean-forward="true" selection-start-line="188" selection-start-column="20" selection-end-line="188" selection-end-column="44" />
           <folding>
             <element signature="n#style#0;n#el-menu-item#4;n#el-menu#0;n#div#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#el-header#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
@@ -609,42 +675,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cibit_front/src/components/Kanpan.vue">
+    <entry file="file://$PROJECT_DIR$/cibit_front/src/components/Login.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="12" />
+        <state relative-caret-position="69">
+          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
           <folding>
-            <element signature="n#style#0;n#el-menu-item#4;n#el-menu#0;n#div#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cibit_front/src/components/Mine.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
-          <folding>
-            <element signature="n#style#0;n#el-menu-item#4;n#el-menu#0;n#div#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cibit_front/src/components/realTimeInfo.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
-          <folding>
-            <element signature="n#style#0;n#el-menu-item#4;n#el-menu#0;n#div#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cibit_front/src/components/Service.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="41" column="27" lean-forward="true" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
-          <folding>
-            <element signature="n#style#0;n#el-menu-item#4;n#el-menu#0;n#div#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#636#709#0" />
           </folding>
         </state>
       </provider>
