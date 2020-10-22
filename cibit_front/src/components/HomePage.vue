@@ -30,20 +30,17 @@
         :src=url
         :fit=fits></el-image>
       <div class="floatput"  style="Float:left;height:60px;margin-top: -4%;">
-
         <el-input v-model="SearchParam" placeholder="请输入查询字段" style=" width:300px"></el-input>
         <el-button type="primary">搜索</el-button>
-
-
       </div>
 
     </el-header>
 
-    <el-container>
+    <el-container style="height: 800px">
       <!--      //左侧的部分-->
-      <el-aside style="background-color: red;height: 800px">
-        <el-container style="background-color: chocolate;height: 800px">
-          <el-header style="font-size: 20px; padding: 3%;height: 50px">应用推荐</el-header>
+      <el-aside style="background-color: rgb(91, 103, 114);">
+        <el-container style="background-color: chocolate;">
+          <el-header style="font-size: 20px; padding: 3%;height: 50px;background-color: #99bfa5">应用推荐</el-header>
 
           <el-main class="lm" style="background-color: #E9EEF3;height: 100px">
 <!--            <el-row style="height: 80px" >-->
@@ -58,8 +55,8 @@
           </el-main>
 
           <el-footer style="background-color: #2c3e50;height: 250px;padding: 0">
-            <el-container style="height: 250px">
-              <el-header style="text-align: right;background-color: #99bfa5;height: 25px;width: 100%">热点观察</el-header>
+            <el-container style="height: 350px">
+              <el-header style="text-align: right;background-color: #99bfa5;height: 25px;">热点观察</el-header>
               <el-main style="background-color: crimson;overflow: auto;">some text</el-main>
             </el-container>
           </el-footer>

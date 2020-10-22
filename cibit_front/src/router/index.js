@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import home from "../components/home";
 import HomePage from '@/components/HomePage'
 import realTimeInfo from  '@/components/realTimeInfo'
 import Kanpan from  '@/components/Kanpan'
@@ -11,7 +12,12 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
+      path:'/',
+      name:'/home',
+      component: home
+    },
+    {
+      path: '/HomePage',
       name: 'HomePage',
       component: HomePage
     },
