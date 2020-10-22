@@ -6,12 +6,13 @@ import Kanpan from  '@/components/Kanpan'
 import Login from  '@/components/Login'
 import Service from  '@/components/Service'
 import Mine from  '@/components/Mine'
+import Regist from  '@/components/Regist'
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/login',
       name: 'HomePage',
       component: HomePage
     },
@@ -26,7 +27,7 @@ export default new Router({
       component: Kanpan
     },
     {
-      path: '/Login',
+      path: '/',
       name: 'Login',
       component: Login
     },
@@ -39,6 +40,11 @@ export default new Router({
       path: '/Mine',
       name: 'Mine',
       component: Mine
-    }
+    },
+    {
+      path: '/Regist',
+      name: 'Regist',
+      component: Regist
+    },
   ]
 })

@@ -2,11 +2,12 @@
   <el-container  id="form">
     <el-main id="login">
       <h1>Title</h1>
-      <p>用户名</p><el-input v-model="username" placeholder="请输入用户名" clearable prefix-icon="el-icon-user"></el-input>
-      <p>密码</p><el-input v-model="password" placeholder="请输入密码" show-password clearable prefix-icon="el-icon-key"></el-input>
-      <a href="/" id="signup">注册新账号</a>
+      <p style="text-align:left">用户名</p><el-input v-model="username" placeholder="请输入用户名" clearable prefix-icon="el-icon-user"></el-input>
+      <p style="text-align:left">密码</p><el-input v-model="password" placeholder="请输入密码" show-password clearable prefix-icon="el-icon-key"></el-input>
+
       <el-footer style="padding-top: 20px; text-align: center">
-        <el-button type="primary" round size="max" onclick="submit">登录</el-button>
+        <el-button type="primary" round size="max" @click="submit" style="margin-left: 110px;">登录</el-button>
+        <a  id="signup" style=" margin-left: 50px;" @click="register">注册新账号</a>
       </el-footer>
     </el-main>
   </el-container>
@@ -48,7 +49,10 @@
         }
 
 
-      }
+      },
+      register(){
+        this.$router.push("/Regist")
+      },
     },
   }
 
@@ -66,7 +70,7 @@
 }
 #login{
   height: auto;
-  width: 350px;
+  width: 400px;
   border: 1px solid lightblue;
   float: right;
   margin-top: 140px;
