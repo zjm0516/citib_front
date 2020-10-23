@@ -8,16 +8,22 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import App from './App.vue';
 import echarts from "echarts";
-import Axios from "axios";
-Vue.use(ElementUI);
 
-var axios = require('axios');
-Axios.defaults.baseURL = '/api';
+import axios from 'axios';
+import Qs from 'qs';
+
+
+
+axios.defaults.baseURL = '/api';
 // 全局注册，之后可在其他组件中通过 this.$axios 发送数据
 Vue.prototype.$axios = axios;
+Vue.prototype.qs = Qs;
+Vue.prototype.$echarts = echarts;
 Vue.config.productionTip = false;
-Vue.config.productionTip = false;
+
 Vue.use(echarts);
+
+Vue.use(ElementUI);
 
 
 /* eslint-disable no-new */
