@@ -7,17 +7,18 @@ import Login from  '@/components/Login'
 import Service from  '@/components/Service'
 import Mine from  '@/components/Mine'
 import Regist from  '@/components/Regist'
+import home from "../components/home";
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/login',
+      path: '/HomePage',
       name: 'HomePage',
       component: HomePage
     },
     {
-      path: '/realTimeInfo',
+      path: '/',
       name: 'realTimeInfo',
       component: realTimeInfo
     },
@@ -27,7 +28,7 @@ export default new Router({
       component: Kanpan
     },
     {
-      path: '/',
+      path: '/Login',
       name: 'Login',
       component: Login
     },

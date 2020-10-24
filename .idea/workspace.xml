@@ -19,16 +19,18 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36cb6162-7692-4abb-b799-e0974ef507a4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cibit_front/src/components/home.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cibit_front/src/components/HomePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cibit_front/src/components/HomePage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cibit_front/src/components/Kanpan.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cibit_front/src/components/Kanpan.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cibit_front/src/components/realTimeInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cibit_front/src/components/realTimeInfo.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cibit_front/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cibit_front/src/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,15 +58,15 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="65" />
-    <option name="y" value="30" />
-    <option name="width" value="1750" />
-    <option name="height" value="745" />
-  </component>
+  <component name="ProjectId" id="1jJ3GgDioFt25ghYekY9JI3yyRX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -80,22 +82,12 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
   <component name="RunManager" selected="npm.npmrun">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="home.vue" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/citib_front/cibit_front/src/components/home.vue" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -110,15 +102,11 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="JavaScript 调试.home.vue" />
       <item itemvalue="npm.npmrun" />
-      <item itemvalue="JavaScript Debug.home.vue" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JavaScript Debug.home.vue" />
-      </list>
-    </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -143,6 +131,7 @@
       <workItem from="1603191444102" duration="11225000" />
       <workItem from="1603238268790" duration="4437000" />
       <workItem from="1603287382345" duration="1463000" />
+      <workItem from="1603508329985" duration="8020000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1602219078709</created>
@@ -234,7 +223,7 @@
     </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -261,21 +250,29 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="223" y="72" width="1089" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1603357111931" />
-    <state width="1493" height="177" key="GridCell.Tab.0.bottom" timestamp="1603357153201">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1493" height="223" key="GridCell.Tab.0.bottom" timestamp="1603461710453">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="177" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1603357153201" />
-    <state width="1493" height="177" key="GridCell.Tab.0.center" timestamp="1603357153200">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1493" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1603461710453" />
+    <state width="1493" height="223" key="GridCell.Tab.0.center" timestamp="1603461710453">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="177" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1603357153200" />
-    <state width="1493" height="177" key="GridCell.Tab.0.left" timestamp="1603357153200">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1493" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1603461710453" />
+    <state width="1493" height="223" key="GridCell.Tab.0.left" timestamp="1603461710453">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="177" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1603357153200" />
-    <state width="1493" height="177" key="GridCell.Tab.0.right" timestamp="1603357153200">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1493" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1603461710453" />
+    <state width="1493" height="223" key="GridCell.Tab.0.right" timestamp="1603461710453">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="177" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1603357153200" />
+    <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1603461710453" />
+    <state x="425" y="197" key="run.anything.popup" timestamp="1603458147069">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="425" y="197" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1603458147069" />
   </component>
 </project>

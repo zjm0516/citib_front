@@ -213,24 +213,7 @@
               },
               data: this.averagefaultLine.valveAverageFaultData
             }
-            // {
-            //   name: "A类",
-            //   type: "bar",
-            //   barGap: 0,
-            //   barWidth: 30,
-            //   label: {
-            //     show: true, // 开启显示
-            //     position: "top", // 在上方显示
-            //     distance: 5, // 距离图形元素的距离。当 position 为字符描述值（如 'top'、'insideRight'）时候有效。
-            //     verticalAlign: "middle",
-            //     textStyle: {
-            //       // 数值样式
-            //       color: "#3FBCEF",
-            //       fontSize: 12
-            //     }
-            //   },
-            //   data: this.pumpRunTimeBar.aData
-            // }
+
           ]
         };
         averagefaultLineChart.setOption(option);
