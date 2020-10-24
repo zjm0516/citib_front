@@ -84,13 +84,12 @@
     },
     //mounted指的是在你加载界面的时候调用的函数，函数定义还是写在methods中
     mounted(){
-      window.addEventListener("keydown", this.handleKeyup); //键盘按键事件
-      window.addEventListener("click", this.handleClick); //鼠标点击事件
-      window.addEventListener("scroll", this.handleWeel); //鼠标滚轮事件
-      window.addEventListener("mousemove", this.handleMove); //鼠标滚轮事件
+
       console.log("hhek");
       this.drawTotalKLineChart();
       this.drawcarbonTradingeNumPieChart();
+      this.getcarbonTradingeAmountChartData();
+      this.getcarbonTradingeNumberChartData();
       console.log("dj");
     },
     // watch是指当界面有变化的时候，执行的函数
@@ -440,8 +439,8 @@
       getTotalKLineChartData()
       {
         let that = this;
-        this.axios
-          .get("/getTotalKLineChartData", {})
+        this.$axios
+          .post("/getTotalKLineChartData", {})
           .then(function(res) {
 
            that.drawTotalKLineChart();
@@ -453,8 +452,8 @@
       },
       getcarbonTradingeNumberChartData(){
         let that = this;
-        this.axios
-          .get("/getcarbonTradingeNumberChartData", {})
+        this.$axios
+          .post("/getcarbonTradingeNumberChartData", {})
           .then(function(res) {
             that.drawcarbonTradingeNumPieChart();
           })
@@ -464,8 +463,8 @@
       },
       getcarbonTradingeAmountChartData(){
         let that = this;
-        this.axios
-          .get("/getcarbonTradingeAmountChartData", {})
+        this.$axios
+          .post("/getcarbonTradingeAmountChartData", {})
           .then(function(res) {
             that.drawcarbonTradingeNumPieChart();
           })
