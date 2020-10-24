@@ -56,7 +56,7 @@
         guangdongKLine:[],
         tianjinKLine:[]
       },
-      carbonTradingeNumPiedata:[
+      carbonTradingNumberPiedata:[
         {value:2,name:"湖北"},
         {value:5,name:"上海"},
         {value:2,name:"北京"},
@@ -66,7 +66,7 @@
         {value:2,name:"深圳"},
         {value:5,name:"福建"}
       ],
-      carbonTradingeMountPiedata:[
+      carbonTradingAmountPiedata:[
         {value:2,name:"湖北"},
         {value:5,name:"上海"},
         {value:2,name:"北京"},
@@ -451,10 +451,21 @@
             console.log(error);
           });
       },
-      getcarbonTradingeMountChartData(){
+      getcarbonTradingeNumberChartData(){
         let that = this;
         this.axios
-          .get("/getcarbonTradingeMountChartData", {})
+          .get("/getcarbonTradingeNumberChartData", {})
+          .then(function(res) {
+            that.drawcarbonTradingeNumPieChart();
+          })
+          .catch(function(error) {
+            console.log(error);
+          });
+      },
+      getcarbonTradingeAmountChartData(){
+        let that = this;
+        this.axios
+          .get("/getcarbonTradingeAmountChartData", {})
           .then(function(res) {
             that.drawcarbonTradingeNumPieChart();
           })
