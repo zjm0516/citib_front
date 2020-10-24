@@ -88,6 +88,7 @@
       console.log("hhek");
       this.drawTotalKLineChart();
       this.drawcarbonTradingeNumPieChart();
+      this.drawcarbonTradingeMountChart();
       this.getcarbonTradingeAmountChartData();
       this.getcarbonTradingeNumberChartData();
       console.log("dj");
@@ -398,6 +399,7 @@
             data: ["湖北","上海","北京","重庆","广东","天津","深圳","福建"],
             orient: "horizontal",
             right: "3%",
+            top: 'bottom',
             textStyle: {
               fontsize: 14,
               fontfamily: "Microsoft YaHei",
@@ -428,12 +430,92 @@
                   }
                 }
               },
-              data: this.carbonTradingeNumPiedata
+              data: this.carbonTradingNumberPiedata
             },
 
           ]
         };
         carbonTradingeNumPieChart.setOption(option);
+
+      },
+      drawcarbonTradingeMountChart(){
+        let carbonTradingeMountChart = this.$echarts.init(
+          document.getElementById("carbonTradingeMountChart")
+        );
+        carbonTradingeMountChart.resize();
+        let option = {
+
+          title: {
+            text: '碳交额',
+            // subtext: '模拟数据',
+            // x 设置水平安放位置，默认左对齐，可选值：'center' ¦ 'left' ¦ 'right' ¦ {number}（x坐标，单位px）
+            x: 'center',
+            // y 设置垂直安放位置，默认全图顶端，可选值：'top' ¦ 'bottom' ¦ 'center' ¦ {number}（y坐标，单位px）
+            y: 'top',
+            // itemGap设置主副标题纵向间隔，单位px，默认为10，
+            // itemGap: 30,
+            backgroundColor: '#EEE',
+            // 主标题文本样式设置
+            textStyle: {
+              fontSize: 26,
+              fontWeight: 'bolder',
+              color: '#000080'
+            },
+            // 副标题文本样式设置
+            // subtextStyle: {
+            //   fontSize: 18,
+            //   color: '#8B2323'
+            // }
+          },
+
+          tooltip: {
+            trigger: "item",
+            // axisPointer: {
+            //   type: "shadow"
+            // }
+          },
+          //legend是图例，就是一个有几条线
+          legend: {
+            data: ["湖北","上海","北京","重庆","广东","天津","深圳","福建"],
+            orient: "horizontal",
+            right: "3%",
+            top: 'bottom',
+            textStyle: {
+              fontsize: 14,
+              fontfamily: "Microsoft YaHei",
+              fontweight: 400,
+              color: "#a7a2a2"
+            }
+          },
+
+          series: [
+            {
+              name: "碳交额",
+              type: "pie",
+              label: {
+                show: false, // 开启显示
+                position: "top", // 在上方显示
+                distance: 5, // 距离图形元素的距离。当 position 为字符描述值（如 'top'、'insideRight'）时候有效。
+                verticalAlign: "middle",
+                textStyle: {
+                  // 数值样式
+                  color: "#3FBCEF",
+                  fontSize: 12
+                },
+                emphasis: {
+                  show: true,
+                  textStyle: {
+                    fontSize: '30',
+                    fontWeight: 'blod'
+                  }
+                }
+              },
+              data: this.carbonTradingAmountPiedata
+            },
+
+          ]
+        };
+        carbonTradingeMountChart.setOption(option);
 
       },
       getTotalKLineChartData()
@@ -481,14 +563,18 @@
 
 <style scoped>
 .carbonTradingeNum{
-  margin-top:100px;
+
   margin-right: 150px;
-  width: 500px;
-  height: 600px;
+  width: 400px;
+  height: 400px;
   background-color: chocolate;
 }
 .carbonTradingeMount{
 
+  margin-right: 150px;
+  width: 400px;
+  height: 400px;
+  background-color: chocolate;
 }
   .totalKLine{
     margin-top:100px;
