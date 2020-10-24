@@ -28,7 +28,9 @@
     export default {
         name: "Mine" ,
         data(){
-          return{}
+          return{
+
+          }
 
         },
       //mounted指的是在你加载界面的时候调用的函数，函数定义还是写在methods中

@@ -18,7 +18,7 @@ export default new Router({
       component: HomePage
     },
     {
-      path: '/',
+      path: '/realTimeInfo',
       name: 'realTimeInfo',
       component: realTimeInfo
     },

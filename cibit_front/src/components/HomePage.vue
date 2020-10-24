@@ -30,7 +30,7 @@
         style="width: 100px; height: 100px;top: 10px;
     left: -40%"
         :src=url
-        :fit=fits></el-image>
+        ></el-image>
       <div class="floatput" style="Float:left;height:60px;margin-top: -4%;">
         <el-input v-model="SearchParam" placeholder="请输入查询字段" style=" width:300px"></el-input>
         <el-button type="primary">搜索</el-button>

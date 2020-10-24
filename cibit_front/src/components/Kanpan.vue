@@ -24,43 +24,15 @@
 
     </el-header>
     <el-container>
-      <el-aside width="1200px">
-            <div class="chart6Div">
-
-                <span class="title-left"></span>
-                <div class="title-mid">
-                  <!-- <span @click="valveAlarmLimit">阀报警超限:{{valveAlarmCount}}</span> -->
-                  <span>平均故障周期</span>
-                </div>
-                <span class="title-right"></span>
-              </div>
-              <div>
-                <el-select
-                  v-model="yearSelect"
-                  placeholder="请选择"
-                  class="YearMenu"
-                  size="mini"
-                >
-                  <el-option v-for="item in yearMenuList" :key="item" :label="item" :value="item"></el-option>
-                </el-select>
-
-                <el-select
-                  v-model="deviceTypeSelect"
-                  placeholder="请选择"
-                  class="deviceTypeMenu"
-                  size="mini"
-                >
-                  <el-option v-for="item in deviceTypeMenuList" :key="item" :label="item" :value="item"></el-option>
-                </el-select>
-                <div id="totalKLineChart"></div>
-              </div>
-
-
-
-
+      <el-aside width="1200px" style="background-color: #333333">
+<!--//下面的一个div就是图线-->
+                <div class="totalKLine" id="totalKLineChart" ></div>
       </el-aside>
 
-      <el-main style=" height:900px;background-color: aqua">
+      <el-main style=" height:900px;background-color: white">
+<!--//下面画两个饼状图-->
+        <div class="carbonTradingeNum" id="carbonTradingeNumPieChart" ></div>
+        <div class="carbonTradingeMount" id="carbonTradingeMountChart" ></div>
 
 
       </el-main>
@@ -73,17 +45,61 @@
     export default {
         name: "Kanpan",
      data(){
-    return{}
+    return{
+      totalKLine:{
+        shenzhenKLine:[],
+        hubeiKLine:[],
+        chongqingLine:[],
+        fujianKLine:[],
+        beijingKLine:[],
+        shanghaiKLine:[],
+        guangdongKLine:[],
+        tianjinKLine:[]
+      },
+      carbonTradingeNumPiedata:[
+        {value:2,name:"湖北"},
+        {value:5,name:"上海"},
+        {value:2,name:"北京"},
+        {value:5,name:"重庆"},
+        {value:2,name:"广东"},
+        {value:5,name:"天津"},
+        {value:2,name:"深圳"},
+        {value:5,name:"福建"}
+      ],
+      carbonTradingeMountPiedata:[
+        {value:2,name:"湖北"},
+        {value:5,name:"上海"},
+        {value:2,name:"北京"},
+        {value:5,name:"重庆"},
+        {value:2,name:"广东"},
+        {value:5,name:"天津"},
+        {value:2,name:"深圳"},
+        {value:5,name:"福建"}
+      ],
+
+      activeIndex: '1',
+      activeIndex2: '1',
+    }
 
     },
     //mounted指的是在你加载界面的时候调用的函数，函数定义还是写在methods中
     mounted(){
-
+      window.addEventListener("keydown", this.handleKeyup); //键盘按键事件
+      window.addEventListener("click", this.handleClick); //鼠标点击事件
+      window.addEventListener("scroll", this.handleWeel); //鼠标滚轮事件
+      window.addEventListener("mousemove", this.handleMove); //鼠标滚轮事件
+      console.log("hhek");
+      this.drawTotalKLineChart();
+      this.drawcarbonTradingeNumPieChart();
+      console.log("dj");
     },
     // watch是指当界面有变化的时候，执行的函数
 
     //一般的方法写在这里
     methods:{
+      handleSelect(key, keyPath) {
+        console.log(key, keyPath);
+      },
       changeToHomePage(){
         this.$router.push({ path: '/' })
       },
@@ -100,34 +116,32 @@
         this.$router.push({ path: '/Mine' })
       },
       drawTotalKLineChart(){
-        let that = this;
+
         let totalKLineChart = this.$echarts.init(
           document.getElementById("totalKLineChart")
         );
         totalKLineChart.resize();
         let option = {
-          // title: {
-          //   text: "ICM报警",
-          //   top: "3%",
-          //   left: "20"
-          // },
+
           tooltip: {
             trigger: "axis",
             axisPointer: {
               type: "shadow"
             }
           },
+          //legend是图例，就是一个有几条线
           legend: {
-            data: ["carbonFinance"],
-            orient: "vertical",
+            data: ["湖北","上海","北京","重庆","广东","天津","深圳","福建"],
+            orient: "horizontal",
             right: "3%",
             textStyle: {
               fontsize: 14,
               fontfamily: "Microsoft YaHei",
               fontweight: 400,
-              color: "rgba(0, 250, 168, 1)"
+              color: "#a7a2a2"
             }
           },
+          //grid就是有几个图
           grid: {
             left: "2%",
             right: "2%",
@@ -136,11 +150,11 @@
           },
           xAxis: {
             //triggerEvent: true,
-            type: "category",
-            name: "月份",
+            type: "time",
+            name: "时间",
             nameTextStyle: {
-              padding: [70, 0, 0, -140], // 四个数字分别为上右下左与原位置距离
-              color: "rgba(63,188,239)",
+              padding: [-20, 0, 0, -55], // 四个数字分别为上右下左与原位置距离
+              color: "#716d6d",
               fontWeight: 400,
               fontFamily: "Microsoft YaHei",
               fontSize: 14,
@@ -148,7 +162,7 @@
             },
             axisLine: {
               lineStyle: {
-                color: "rgba(51,102,255,1)"
+                color:"#716d6d"
               }
             },
             axisLabel: {
@@ -161,21 +175,32 @@
             },
 
             boundaryGap: [0, 0.01],
-            data: this.averagefaultLine.groupList
+
           },
+          dataZoom: [{
+            type: 'slider',
+            show: true,
+            xAxisIndex: [0],
+            // left: '9%',
+            bottom: -5,
+            start: 10,
+            end: 90
+          }],//初始化滚动条
           yAxis: {
             type: "value",
-            name: "价格",
+            name: "成交价（元）",
             nameTextStyle: {
-              color: "rgba(63,188,239)",
+              color: "#716d6d",
+              padding: [0, 0, -20, 60],// 四个数字分别为上右下左与原位置距离
               fontWeight: 400,
               fontFamily: "Microsoft YaHei",
               fontSize: 14,
-              lineHeight: 36
+              lineHeight: 36,
+
             },
             axisLine: {
               lineStyle: {
-                color: "rgba(51,102,255,1)"
+                color: "#716d6d"
               }
             },
             axisLabel: {
@@ -196,12 +221,10 @@
 
           series: [
             {
-              name: "valve",
+              name: "湖北",
               type: "line",
-              barGap: 0,
-              barWidth: 30,
               label: {
-                show: true, // 开启显示
+                show: false, // 开启显示
                 position: "top", // 在上方显示
                 distance: 5, // 距离图形元素的距离。当 position 为字符描述值（如 'top'、'insideRight'）时候有效。
                 verticalAlign: "middle",
@@ -211,30 +234,234 @@
                   fontSize: 12
                 }
               },
-              data: this.averagefaultLine.valveAverageFaultData
+              data: []
+            },
+            {
+              name: "上海",
+              type: "line",
+
+              label: {
+                show: false, // 开启显示
+                position: "top", // 在上方显示
+                distance: 5, // 距离图形元素的距离。当 position 为字符描述值（如 'top'、'insideRight'）时候有效。
+                verticalAlign: "middle",
+                textStyle: {
+                  // 数值样式
+                  color: "#3FBCEF",
+                  fontSize: 12
+                }
+              },
+              data: []
+            },
+            {
+              name: "北京",
+              type: "line",
+
+              label: {
+                show: false, // 开启显示
+                position: "top", // 在上方显示
+                distance: 5, // 距离图形元素的距离。当 position 为字符描述值（如 'top'、'insideRight'）时候有效。
+                verticalAlign: "middle",
+                textStyle: {
+                  // 数值样式
+                  color: "#3FBCEF",
+                  fontSize: 12
+                }
+              },
+              data: []
+            },
+            {
+              name: "重庆",
+              type: "line",
+
+              label: {
+                show: false, // 开启显示
+                position: "top", // 在上方显示
+                distance: 5, // 距离图形元素的距离。当 position 为字符描述值（如 'top'、'insideRight'）时候有效。
+                verticalAlign: "middle",
+                textStyle: {
+                  // 数值样式
+                  color: "#3FBCEF",
+                  fontSize: 12
+                }
+              },
+              data: []
+            },
+            {
+              name: "广东",
+              type: "line",
+
+              label: {
+                show: false, // 开启显示
+                position: "top", // 在上方显示
+                distance: 5, // 距离图形元素的距离。当 position 为字符描述值（如 'top'、'insideRight'）时候有效。
+                verticalAlign: "middle",
+                textStyle: {
+                  // 数值样式
+                  color: "#3FBCEF",
+                  fontSize: 12
+                }
+              },
+              data: []
+            },
+            {
+              name: "天津",
+              type: "line",
+
+              label: {
+                show: false, // 开启显示
+                position: "top", // 在上方显示
+                distance: 5, // 距离图形元素的距离。当 position 为字符描述值（如 'top'、'insideRight'）时候有效。
+                verticalAlign: "middle",
+                textStyle: {
+                  // 数值样式
+                  color: "#3FBCEF",
+                  fontSize: 12
+                }
+              },
+              data: []
+            },
+            {
+              name: "深圳",
+              type: "line",
+
+              label: {
+                show: false, // 开启显示
+                position: "top", // 在上方显示
+                distance: 5, // 距离图形元素的距离。当 position 为字符描述值（如 'top'、'insideRight'）时候有效。
+                verticalAlign: "middle",
+                textStyle: {
+                  // 数值样式
+                  color: "#3FBCEF",
+                  fontSize: 12
+                }
+              },
+              data: []
+            },
+            {
+              name: "福建",
+              type: "line",
+
+              label: {
+                show: false, // 开启显示
+                position: "top", // 在上方显示
+                distance: 5, // 距离图形元素的距离。当 position 为字符描述值（如 'top'、'insideRight'）时候有效。
+                verticalAlign: "middle",
+                textStyle: {
+                  // 数值样式
+                  color: "#3FBCEF",
+                  fontSize: 12
+                }
+              },
+              data: []
             }
+          ]
+        };
+        totalKLineChart.setOption(option);
+      },
+      drawcarbonTradingeNumPieChart(){
+        let carbonTradingeNumPieChart = this.$echarts.init(
+          document.getElementById("carbonTradingeNumPieChart")
+        );
+        carbonTradingeNumPieChart.resize();
+        let option = {
+          title: {
+            text: '碳交易量',
+            // subtext: '模拟数据',
+            // x 设置水平安放位置，默认左对齐，可选值：'center' ¦ 'left' ¦ 'right' ¦ {number}（x坐标，单位px）
+            x: 'center',
+            // y 设置垂直安放位置，默认全图顶端，可选值：'top' ¦ 'bottom' ¦ 'center' ¦ {number}（y坐标，单位px）
+            y: 'top',
+            // itemGap设置主副标题纵向间隔，单位px，默认为10，
+            // itemGap: 30,
+            backgroundColor: '#EEE',
+            // 主标题文本样式设置
+            textStyle: {
+              fontSize: 26,
+              fontWeight: 'bolder',
+              color: '#000080'
+            },
+            // 副标题文本样式设置
+            // subtextStyle: {
+            //   fontSize: 18,
+            //   color: '#8B2323'
+            // }
+          },
+
+          tooltip: {
+            trigger: "item",
+            // axisPointer: {
+            //   type: "shadow"
+            // }
+          },
+          //legend是图例，就是一个有几条线
+          legend: {
+            data: ["湖北","上海","北京","重庆","广东","天津","深圳","福建"],
+            orient: "horizontal",
+            right: "3%",
+            textStyle: {
+              fontsize: 14,
+              fontfamily: "Microsoft YaHei",
+              fontweight: 400,
+              color: "#a7a2a2"
+            }
+          },
+
+          series: [
+            {
+              name: "碳交易量",
+              type: "pie",
+              label: {
+                show: false, // 开启显示
+                position: "top", // 在上方显示
+                distance: 5, // 距离图形元素的距离。当 position 为字符描述值（如 'top'、'insideRight'）时候有效。
+                verticalAlign: "middle",
+                textStyle: {
+                  // 数值样式
+                  color: "#3FBCEF",
+                  fontSize: 12
+                },
+                emphasis: {
+                  show: true,
+                  textStyle: {
+                    fontSize: '30',
+                    fontWeight: 'blod'
+                  }
+                }
+              },
+              data: this.carbonTradingeNumPiedata
+            },
 
           ]
         };
-        averagefaultLineChart.setOption(option);
+        carbonTradingeNumPieChart.setOption(option);
 
-        this.echart6 = averagefaultLineChart;
-        //不加下面一行，click会触发多次
-        averagefaultLineChart.getZr().off("click");
-        //点击事件
-        averagefaultLineChart.getZr().on("click", function(params) {
-          const pointInPixel = [params.offsetX, params.offsetY];
-          //如果落入到柱子中
-          if (averagefaultLineChart.containPixel("grid", pointInPixel)) {
-            let xyPoint = averagefaultLineChart.convertFromPixel(
-              { seriesIndex: 0 },
-              [params.offsetX, params.offsetY]
-            );
-
-          }
-        });
       },
+      getTotalKLineChartData()
+      {
+        let that = this;
+        this.axios
+          .get("/getTotalKLineChartData", {})
+          .then(function(res) {
 
+           that.drawTotalKLineChart();
+
+          })
+          .catch(function(error) {
+            console.log(error);
+          });
+      },
+      getcarbonTradingeMountChartData(){
+        let that = this;
+        this.axios
+          .get("/getcarbonTradingeMountChartData", {})
+          .then(function(res) {
+            that.drawcarbonTradingeNumPieChart();
+          })
+          .catch(function(error) {
+            console.log(error);
+          });
+      },
     },
     watch:{
 
@@ -243,7 +470,23 @@
 </script>
 
 <style scoped>
-.z_line{
+.carbonTradingeNum{
+  margin-top:100px;
+  margin-right: 150px;
+  width: 500px;
+  height: 600px;
+  background-color: chocolate;
+}
+.carbonTradingeMount{
+
+}
+  .totalKLine{
+    margin-top:100px;
+    margin-left: 150px;
+    width: 1000px;
+    height: 600px;
+  }
+ .z_line{
   height: 70px;
   font-size: 24px;
   cursor: pointer;
