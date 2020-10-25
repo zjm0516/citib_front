@@ -21,15 +21,14 @@
     </div>
     <el-header style="background-color: black;height: 70px">
       <ul class="z_line"><li  style="color: #fff;background: #333333;width: 60px;border-top: 1px solid #5a5a5a;">行情</li></ul>
-
     </el-header>
     <el-container>
-      <el-aside width="1200px" style="background-color: #333333">
+      <el-aside width="1200px" style="background-color: black">
 <!--//下面的一个div就是图线-->
                 <div class="totalKLine" id="totalKLineChart" ></div>
       </el-aside>
 
-      <el-main style=" height:900px;background-color: white">
+      <el-main style=" height:900px;background-color: black">
 <!--//下面画两个饼状图-->
         <div class="carbonTradingeNum" id="carbonTradingeNumPieChart" ></div>
         <div class="carbonTradingeMount" id="carbonTradingeMountChart" ></div>
@@ -133,7 +132,7 @@
           legend: {
             data: ["湖北","上海","北京","重庆","广东","天津","深圳","福建"],
             orient: "horizontal",
-            right: "3%",
+            top: 'top',
             textStyle: {
               fontsize: 14,
               fontfamily: "Microsoft YaHei",
@@ -390,23 +389,38 @@
 
           tooltip: {
             trigger: "item",
-            // axisPointer: {
-            //   type: "shadow"
-            // }
+            formatter: "{b} <br/> 成交总量: {c}万吨  <br/> 市场占比：({d}%)"
+
           },
           //legend是图例，就是一个有几条线
-          legend: {
-            data: ["湖北","上海","北京","重庆","广东","天津","深圳","福建"],
-            orient: "horizontal",
-            right: "3%",
-            top: 'bottom',
-            textStyle: {
-              fontsize: 14,
-              fontfamily: "Microsoft YaHei",
-              fontweight: 400,
-              color: "#a7a2a2"
+          legend: [
+            {
+              data: ["湖北","上海","北京","重庆"],
+              orient: "horizontal",
+
+
+              bottom:'0%',
+              textStyle: {
+                fontsize: 14,
+                fontfamily: "Microsoft YaHei",
+                fontweight: 400,
+                color: "#a7a2a2"
+              }
+            },
+            {
+              data: ["广东","天津","深圳","福建"],
+              orient: "horizontal",
+
+
+              bottom:'7%',
+              textStyle: {
+                fontsize: 14,
+                fontfamily: "Microsoft YaHei",
+                fontweight: 400,
+                color: "#a7a2a2"
+              }
             }
-          },
+          ],
 
           series: [
             {
@@ -446,7 +460,7 @@
         let option = {
 
           title: {
-            text: '碳交额',
+            text: '碳交易额',
             // subtext: '模拟数据',
             // x 设置水平安放位置，默认左对齐，可选值：'center' ¦ 'left' ¦ 'right' ¦ {number}（x坐标，单位px）
             x: 'center',
@@ -470,31 +484,49 @@
 
           tooltip: {
             trigger: "item",
+            formatter: "{b} <br/> 成交总额: {c}万元 <br/> 市场占比：({d}%)"
             // axisPointer: {
             //   type: "shadow"
             // }
           },
           //legend是图例，就是一个有几条线
-          legend: {
-            data: ["湖北","上海","北京","重庆","广东","天津","深圳","福建"],
-            orient: "horizontal",
-            right: "3%",
-            top: 'bottom',
-            textStyle: {
-              fontsize: 14,
-              fontfamily: "Microsoft YaHei",
-              fontweight: 400,
-              color: "#a7a2a2"
+          legend: [
+            {
+              data: ["湖北","上海","北京","重庆"],
+              orient: "horizontal",
+
+
+              bottom:'0%',
+              textStyle: {
+                fontsize: 14,
+                fontfamily: "Microsoft YaHei",
+                fontweight: 400,
+                color: "#a7a2a2"
+              }
+            },
+            {
+              data: ["广东","天津","深圳","福建"],
+              orient: "horizontal",
+
+
+              bottom:'7%',
+              textStyle: {
+                fontsize: 14,
+                fontfamily: "Microsoft YaHei",
+                fontweight: 400,
+                color: "#a7a2a2"
+              }
             }
-          },
+          ],
 
           series: [
             {
-              name: "碳交额",
+              name: "碳交易额",
               type: "pie",
               label: {
                 show: false, // 开启显示
                 position: "top", // 在上方显示
+
                 distance: 5, // 距离图形元素的距离。当 position 为字符描述值（如 'top'、'insideRight'）时候有效。
                 verticalAlign: "middle",
                 textStyle: {
@@ -564,17 +596,17 @@
 <style scoped>
 .carbonTradingeNum{
 
-  margin-right: 150px;
-  width: 400px;
-  height: 400px;
-  background-color: chocolate;
+  padding-top: 0px;
+  width: 450px;
+  height: 450px;
+  background-color: #5a5a5a;
 }
 .carbonTradingeMount{
 
   margin-right: 150px;
-  width: 400px;
-  height: 400px;
-  background-color: chocolate;
+  width: 450px;
+  height: 450px;
+ background-color: #2c3e50;
 }
   .totalKLine{
     margin-top:100px;

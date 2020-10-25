@@ -1,5 +1,5 @@
 <template>
-  <el-container>
+  <el-container direction="vertical">
     <div class="topMenu" >
       <el-menu
         :default-active="activeIndex2"
@@ -19,8 +19,27 @@
         <!--        <div class="el-icon-user-solid" style="font-size: 40px"></div>-->
       </el-menu>
     </div>
-    <el-header>Header</el-header>
-    <el-main>Main</el-main>
+    <el-main>
+
+        <el-tabs  type="card" @tab-click="handleClick">
+          <el-tab-pane label="大盘预测" type="primary">
+            <el-main style="background-color: black">
+
+
+            </el-main>
+          </el-tab-pane>
+          <el-tab-pane label="智能决策" type="primary">
+            <el-main>
+              <el-collapse v-model="activeNames" @change="handleChange">
+
+              </el-collapse>
+            </el-main>
+          </el-tab-pane>
+
+
+        </el-tabs>
+
+    </el-main>
   </el-container>
 </template>
 

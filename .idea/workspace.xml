@@ -29,6 +29,7 @@
     <list default="true" id="36cb6162-7692-4abb-b799-e0974ef507a4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cibit_front/src/components/Kanpan.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cibit_front/src/components/Kanpan.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cibit_front/src/components/Service.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cibit_front/src/components/Service.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +110,7 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JavaScript 调试.home.vue" />
+      <item itemvalue="JavaScript Debug.home.vue" />
       <item itemvalue="npm.npmrun" />
       <item itemvalue="npm.start" />
     </list>
@@ -146,7 +147,8 @@
       <workItem from="1603287382345" duration="1463000" />
       <workItem from="1603508329985" duration="8020000" />
       <workItem from="1603530367309" duration="755000" />
-      <workItem from="1603543458847" duration="2546000" />
+      <workItem from="1603543458847" duration="8273000" />
+      <workItem from="1603591483180" duration="4079000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1602219078709</created>
@@ -246,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603527429824</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="看盘实现">
+      <created>1603546104050</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1603546104050</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,17 +279,18 @@
     <MESSAGE value="新建看盘，咨询，我的界面" />
     <MESSAGE value="给每个界面添加导航栏" />
     <MESSAGE value="添加" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加" />
+    <MESSAGE value="看盘实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="看盘实现" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="72" width="1089" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603357111931">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="223" y="72" width="1089" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1603357111931" />
-    <state x="314" y="0" key="CommitChangelistDialog2" timestamp="1603527427668">
+    <state x="314" y="0" key="CommitChangelistDialog2" timestamp="1603546101799">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="314" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1603527427668" />
+    <state x="314" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1603546101799" />
     <state width="880" height="440" key="GridCell.Tab.0.bottom" timestamp="1603526932722">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -305,10 +315,10 @@
     <state width="880" height="440" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603526932722" />
     <state width="1493" height="177" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1603357153200" />
     <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1603461710453" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1603527433634">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1603546106399">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603527433634" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603546106399" />
     <state x="425" y="197" key="run.anything.popup" timestamp="1603458147069">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
