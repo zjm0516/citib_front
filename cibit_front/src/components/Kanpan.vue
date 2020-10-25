@@ -23,7 +23,7 @@
       <ul class="z_line"><li  style="color: #fff;background: #333333;width: 60px;border-top: 1px solid #5a5a5a;">行情</li></ul>
     </el-header>
     <el-container>
-      <el-aside width="1200px" style="background-color: black">
+      <el-aside width="70%" style="background-color: black">
 <!--//下面的一个div就是图线-->
                 <div class="totalKLine" id="totalKLineChart" ></div>
       </el-aside>
@@ -88,6 +88,7 @@
       this.drawTotalKLineChart();
       this.drawcarbonTradingeNumPieChart();
       this.drawcarbonTradingeMountChart();
+
       this.getcarbonTradingeAmountChartData();
       this.getcarbonTradingeNumberChartData();
       console.log("dj");
@@ -436,6 +437,8 @@
                   color: "#3FBCEF",
                   fontSize: 12
                 },
+                radius : '1%',
+                center: ['50%', '60%'],
                 emphasis: {
                   show: true,
                   textStyle: {
@@ -567,7 +570,7 @@
       getcarbonTradingeNumberChartData(){
         let that = this;
         this.$axios
-          .post("/getcarbonTradingeNumberChartData", {})
+          .post("/getcarbonTradingeNumberChartData", {value:"1"})
           .then(function(res) {
             that.drawcarbonTradingeNumPieChart();
           })
@@ -578,7 +581,7 @@
       getcarbonTradingeAmountChartData(){
         let that = this;
         this.$axios
-          .post("/getcarbonTradingeAmountChartData", {})
+          .post("/getcarbonTradingeAmountChartData", {value:"1"})
           .then(function(res) {
             that.drawcarbonTradingeNumPieChart();
           })
