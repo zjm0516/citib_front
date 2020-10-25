@@ -13,10 +13,8 @@
         text-color="#fff"
         active-text-color="#ffd04b">
         <!--        //为每个界面写跳转-->
-        <el-menu-item index="1" @click="can
-        e">首页
-        </el-menu-item>
-        <el-menu-item index="2" @click="changeToKanpan">h看盘</el-menu-item>
+        <el-menu-item index="1" @click="cane">首页</el-menu-item>
+        <el-menu-item index="2" @click="changeToKanpan">看盘</el-menu-item>
         <el-menu-item index="3" @click="changeTorealTimeInfo">资讯</el-menu-item>
         <el-menu-item index="4" @click="changeToService">服务</el-menu-item>
         <el-menu-item index="5" @click="changeToMine" style="position: absolute;left: 90%;">我的</el-menu-item>
@@ -168,7 +166,7 @@ export default {
       this.Watchtoday = true
     },
     changeToHomePage() {
-      this.$router.push({path: '/'})
+      this.$router.push({path: '/HomePage'})
     },
     changeToKanpan() {
       this.$router.push({path: '/Kanpan'})
