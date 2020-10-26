@@ -27,12 +27,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36cb6162-7692-4abb-b799-e0974ef507a4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cibit_front/src/components/realTimeInfoModule.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cibit_front/src/components/HomePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cibit_front/src/components/HomePage.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cibit_front/src/components/Kanpan.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cibit_front/src/components/Kanpan.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cibit_front/src/components/home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cibit_front/src/components/home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cibit_front/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cibit_front/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cibit_front/src/components/Service.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cibit_front/src/components/Service.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

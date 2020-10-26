@@ -25,14 +25,18 @@
           <el-tab-pane label="大盘预测" type="primary">
 
               <el-container>
-                <el-aside style="width: 1200px;background-color: brown;height:1500px; ">
-                  <el-row style="background-color: #99bfa5">
+                <el-aside style="width: 70%;height:1000px; ">
+                  <el-container style="height: 30%;padding: 0px">
 
-                    <div class="expectedRisingProbabilityLine" id="expectedRisingProbabilityLineChart" ></div>
-                  </el-row>
-                  <el-row style="background-color: aqua">
-                    <div class="futurePrices" id="futurePricesLineChart" ></div>
-                  </el-row>
+                        <div class="expectedRisingProbabilityLine" id="expectedRisingProbabilityLineChart" ></div>
+
+                  </el-container>
+
+
+
+
+
+
 
                 </el-aside>
                 <el-main style="background-color: chocolate">
@@ -64,7 +68,7 @@
       },
       //mounted指的是在你加载界面的时候调用的函数，函数定义还是写在methods中
       mounted(){
-          this.drawTotalKLineChart();
+          this.drawexpectedRisingProbabilityLineChart();
 
       },
       // watch是指当界面有变化的时候，执行的函数
@@ -86,12 +90,12 @@
         changeToMine(){
           this.$router.push({ path: '/Mine' })
         },
-        drawTotalKLineChart(){
+        drawexpectedRisingProbabilityLineChart(){
 
-          let totalKLineChart = this.$echarts.init(
-            document.getElementById("totalKLineChart")
+          let expectedRisingProbabilityLineChart = this.$echarts.init(
+            document.getElementById("expectedRisingProbabilityLineChart")
           );
-          totalKLineChart.resize();
+          expectedRisingProbabilityLineChart.resize();
           let option = {
 
             tooltip: {
@@ -101,9 +105,10 @@
               }
             },
             //legend是图例，就是一个有几条线
-            legend: {
-              data: ["湖北","上海","北京","重庆","广东","天津","深圳","福建"],
-              orient: "horizontal",
+            legend:[{
+              orient:  "horizontal",
+              data: ["湖北"],
+              left:"5%",
               top: 'top',
               textStyle: {
                 fontsize: 14,
@@ -112,52 +117,109 @@
                 color: "#a7a2a2"
               }
             },
+              {
+              orient:  "horizontal",
+              data: ["上海"],
+              gridIndex: 1,
+                left:"10%",
+              top: 'top',
+              textStyle: {
+                fontsize: 14,
+                fontfamily: "Microsoft YaHei",
+                fontweight: 400,
+                color: "#a7a2a2"
+              }
+            },] ,
+            dataZoom: [
+              {
+                type: "inside"
+              }
+            ],
             //grid就是有几个图
-            grid: {
-              left: "2%",
-              right: "2%",
-              bottom: "8%",
-              containLabel: true
-            },
-            xAxis: {
-              //triggerEvent: true,
-              type: "time",
-              name: "时间",
-              nameTextStyle: {
-                padding: [-20, 0, 0, -55], // 四个数字分别为上右下左与原位置距离
-                color: "#716d6d",
-                fontWeight: 400,
-                fontFamily: "Microsoft YaHei",
-                fontSize: 14,
-                lineHeight: 36
-              },
-              axisLine: {
-                lineStyle: {
-                  color:"#716d6d"
+            grid:
+              [
+                {
+                  left: "2%",
+                  right: "2%",
+                  bottom: "50%",
+                  height:"40%",
+                  width:"100%",
+                  containLabel: true
+                },
+                {
+                  left: "2%",
+                  right: "2%",
+                  bottom: "2%",
+                  height: "40%",
+                  width:"100%",
+                  containLabel: true
                 }
-              },
-              axisLabel: {
-                interval: 0,
-                color: "#3FBCEF",
-                fontWeight: 400,
-                fontFamily: "Microsoft YaHei",
-                fontSize: 14,
-                lineHeight: 19
-              },
+              ],
+            xAxis:[
+              {
+                //triggerEvent: true,
+                gridIndex: 0,
+                type: "time",
+                name: "时间",
+                nameTextStyle: {
+                  padding: [-20, 20, 0, 0], // 四个数字分别为上右下左与原位置距离
+                  color: "#716d6d",
+                  fontWeight: 400,
+                  fontFamily: "Microsoft YaHei",
+                  fontSize: 14,
+                  lineHeight: 36
+                },
+                axisLine: {
+                  lineStyle: {
+                    color: "#373131",
+                  }
+                },
+                axisLabel: {
+                  interval: 0,
+                  color: "#373131",
+                  fontWeight: 400,
+                  fontFamily: "Microsoft YaHei",
+                  fontSize: 14,
+                  lineHeight: 19
+                },
 
-              boundaryGap: [0, 0.01],
+                boundaryGap: [0, 0.01],
 
-            },
-            dataZoom: [{
-              type: 'slider',
-              show: true,
-              xAxisIndex: [0],
-              // left: '9%',
-              bottom: -5,
-              start: 10,
-              end: 90
-            }],//初始化滚动条
-            yAxis: {
+              },
+              {
+                //triggerEvent: true,
+                gridIndex: 1,
+                type: "time",
+                name: "时间",
+                nameTextStyle: {
+                  padding: [-20, 20, 0, -55], // 四个数字分别为上右下左与原位置距离
+                  color: "#716d6d",
+                  fontWeight: 400,
+                  fontFamily: "Microsoft YaHei",
+                  fontSize: 14,
+                  lineHeight: 36
+                },
+                axisLine: {
+                  lineStyle: {
+                    color:"#716d6d"
+                  }
+                },
+                axisLabel: {
+                  interval: 0,
+                  color: "#3FBCEF",
+                  fontWeight: 400,
+                  fontFamily: "Microsoft YaHei",
+                  fontSize: 14,
+                  lineHeight: 19
+                },
+
+                boundaryGap: [0, 0.01],
+
+              },
+            ],
+
+            yAxis: [{
+              gridIndex: 0,
               type: "value",
               name: "成交价（元）",
               nameTextStyle: {
@@ -171,7 +233,40 @@
               },
               axisLine: {
                 lineStyle: {
-                  color: "#716d6d"
+                  color: "#373131"
+                }
+              },
+
+              axisLabel: {
+                color: "#3FBCEF",
+                fontWeight: 400,
+                fontFamily: "Microsoft YaHei",
+                fontSize: 14,
+                lineHeight: 19
+              },
+              splitLine: {
+                lineStyle: {
+                  color: "rgba(51,102,255,1)"
+                }
+              },
+              boundaryGap: [0, 0.01]
+            },
+              {
+              gridIndex: 1,
+              type: "value",
+              name: "成交价",
+              nameTextStyle: {
+                color: "#716d6d",
+                padding: [0, 0, -20, 60],// 四个数字分别为上右下左与原位置距离
+                fontWeight: 400,
+                fontFamily: "Microsoft YaHei",
+                fontSize: 14,
+                lineHeight: 36,
+
+              },
+              axisLine: {
+                lineStyle: {
+                  color: "#373131"
                 }
               },
               axisLabel: {
@@ -188,10 +283,12 @@
               },
               boundaryGap: [0, 0.01]
             },
-            color: ["#E6E415", "#F353C0"],
+            ],
+
 
             series: [
               {
+
                 name: "湖北",
                 type: "line",
                 label: {
@@ -205,12 +302,25 @@
                     fontSize: 12
                   }
                 },
-                data: []
+                data: [
+                  [1522306819000, 2],
+                  [1522306919000, 1],
+                  [1522307019000, 3],
+                  [1522307119000, 1],
+                  [1522307120000, 1],
+                  [1522307230000, 1],
+                  [1522302230000, 1],
+                  [1522307430000, 1],
+                  [1522407230000, 1]
+                ]
+
               },
               {
+
                 name: "上海",
                 type: "line",
-
+                xAxisIndex: 1,
+                yAxisIndex: 1,
                 label: {
                   show: false, // 开启显示
                   position: "top", // 在上方显示
@@ -222,113 +332,23 @@
                     fontSize: 12
                   }
                 },
-                data: []
+                data: [
+                  [1522306819000, 2],
+                  [1522306919000, 1],
+                  [1522307019000, 3],
+                  [1522307119000, 1],
+                  [1522307120000, 1],
+                  [1522307230000, 1],
+                  [1522302230000, 1],
+                  [1522307430000, 1],
+                  [1522407230000, 1]
+                ]
+
               },
-              {
-                name: "北京",
-                type: "line",
 
-                label: {
-                  show: false, // 开启显示
-                  position: "top", // 在上方显示
-                  distance: 5, // 距离图形元素的距离。当 position 为字符描述值（如 'top'、'insideRight'）时候有效。
-                  verticalAlign: "middle",
-                  textStyle: {
-                    // 数值样式
-                    color: "#3FBCEF",
-                    fontSize: 12
-                  }
-                },
-                data: []
-              },
-              {
-                name: "重庆",
-                type: "line",
-
-                label: {
-                  show: false, // 开启显示
-                  position: "top", // 在上方显示
-                  distance: 5, // 距离图形元素的距离。当 position 为字符描述值（如 'top'、'insideRight'）时候有效。
-                  verticalAlign: "middle",
-                  textStyle: {
-                    // 数值样式
-                    color: "#3FBCEF",
-                    fontSize: 12
-                  }
-                },
-                data: []
-              },
-              {
-                name: "广东",
-                type: "line",
-
-                label: {
-                  show: false, // 开启显示
-                  position: "top", // 在上方显示
-                  distance: 5, // 距离图形元素的距离。当 position 为字符描述值（如 'top'、'insideRight'）时候有效。
-                  verticalAlign: "middle",
-                  textStyle: {
-                    // 数值样式
-                    color: "#3FBCEF",
-                    fontSize: 12
-                  }
-                },
-                data: []
-              },
-              {
-                name: "天津",
-                type: "line",
-
-                label: {
-                  show: false, // 开启显示
-                  position: "top", // 在上方显示
-                  distance: 5, // 距离图形元素的距离。当 position 为字符描述值（如 'top'、'insideRight'）时候有效。
-                  verticalAlign: "middle",
-                  textStyle: {
-                    // 数值样式
-                    color: "#3FBCEF",
-                    fontSize: 12
-                  }
-                },
-                data: []
-              },
-              {
-                name: "深圳",
-                type: "line",
-
-                label: {
-                  show: false, // 开启显示
-                  position: "top", // 在上方显示
-                  distance: 5, // 距离图形元素的距离。当 position 为字符描述值（如 'top'、'insideRight'）时候有效。
-                  verticalAlign: "middle",
-                  textStyle: {
-                    // 数值样式
-                    color: "#3FBCEF",
-                    fontSize: 12
-                  }
-                },
-                data: []
-              },
-              {
-                name: "福建",
-                type: "line",
-
-                label: {
-                  show: false, // 开启显示
-                  position: "top", // 在上方显示
-                  distance: 5, // 距离图形元素的距离。当 position 为字符描述值（如 'top'、'insideRight'）时候有效。
-                  verticalAlign: "middle",
-                  textStyle: {
-                    // 数值样式
-                    color: "#3FBCEF",
-                    fontSize: 12
-                  }
-                },
-                data: []
-              }
             ]
           };
-          totalKLineChart.setOption(option);
+          expectedRisingProbabilityLineChart.setOption(option);
         }
 
       },
@@ -339,6 +359,18 @@
 </script>
 
 <style scoped>
+.expectedRisingProbabilityLine{
+  padding-top: 0px;
+  padding-right: 10px;
+  width: 1200px;
+  height: 600px;
+
+}
+.fangkuang{
+  background-color: #2c3e50;
+  height: 90%;
+  ;
+}
 .totalKLine{
   margin-top:100px;
   margin-left: 150px;
