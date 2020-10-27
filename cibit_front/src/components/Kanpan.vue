@@ -704,7 +704,7 @@
             }
             for(var i=0;i<that.totalKLineall.shenzhenKLineall.length;i++)
             {
-              var sz=[that.totalKLineall.shenzhenKLineall[i].indate,that.totalKLineall.shenzhenKLineall[i].deal];
+              var sz=[that.totalKLineall.shenzhenKLineall[i].indate,(that.totalKLineall.shenzhenKLineall[i].deal/1).toFixed(1)];
               if(that.totalKLineall.shenzhenKLineall[i].deal==0)
               {
                 continue;
