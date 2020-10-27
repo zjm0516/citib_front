@@ -26,9 +26,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36cb6162-7692-4abb-b799-e0974ef507a4" name="Default Changelist" comment="首页改善">
+    <list default="true" id="36cb6162-7692-4abb-b799-e0974ef507a4" name="Default Changelist" comment="添加日期">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cibit_front/src/components/Kanpan.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cibit_front/src/components/Kanpan.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cibit_front/src/components/realTimeInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cibit_front/src/components/realTimeInfo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cibit_front/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cibit_front/src/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +110,7 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JavaScript Debug.home.vue" />
+      <item itemvalue="JavaScript 调试.home.vue" />
       <item itemvalue="npm.npmrun" />
       <item itemvalue="npm.start" />
     </list>

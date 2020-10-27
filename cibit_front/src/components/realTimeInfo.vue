@@ -27,74 +27,74 @@
         <el-tab-pane label="碳交易" type="primary">
           <el-main>
             <el-collapse v-model="activeNames" @change="handleChange">
-              <el-collapse-item v-bind:title=title[3] name="4">
-                <div style="font-size:12px">日期:{{ time[3] }}</div>
-                <div style="font-size: 16px" align="left">{{ content[3] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[3] target="_blank">详情</el-link>
+              <el-collapse-item  v-bind:title=title[3] name="4">
+                <div style="font-size:12px" align="left">日期:{{ time[3] }}</div>
+                <div style="font-size: 12px" align="left">{{ content[3] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[3] target="_blank" >详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[4] name="5">
-                <div style="font-size:12px">日期:{{ time[4] }}</div>
-                <div style="font-size:16px" align="left">{{ content[4] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[4] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">日期:{{ time[4] }}</div>
+                <div style="font-size:12px" align="left">{{ content[4] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[4] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[5] name="6">
-                <div style="font-size:12px">日期:{{ time[5] }}</div>
-                <div style="font-size:16px" align="left">{{ content[5] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[5] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">日期:{{ time[5] }}</div>
+                <div style="font-size:12px" align="left">{{ content[5] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[5] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[6] name="7">
-                <div style="font-size:12px">日期:{{ time[6] }}</div>
-                <div style="font-size:16px" align="left">{{ content[6] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[6] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">日期:{{ time[6] }}</div>
+                <div style="font-size:12px" align="left">{{ content[6] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[6] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[7] name="8">
-                <div style="font-size:12px">日期:{{ time[7] }}</div>
-                <div style="font-size:16px" align="left">{{ content[7] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[7] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">日期:{{ time[7] }}</div>
+                <div style="font-size:12px" align="left">{{ content[7] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[7] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[8] name="9">
-                <div style="font-size:12px">日期:{{ time[8] }}</div>
-                <div style="font-size:16px" align="left">{{ content[8] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[8] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">日期:{{ time[8] }}</div>
+                <div style="font-size:12px" align="left">{{ content[8] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[8] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[9] name="10">
-                <div style="font-size:12px">日期:{{ time[9] }}</div>
-                <div style="font-size:16px" align="left">{{ content[9] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[9] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">日期:{{ time[9] }}</div>
+                <div style="font-size:12px" align="left">{{ content[9] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[9] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[0] name="1">
-                <div style="font-size:12px">日期:{{ time[0] }}</div>
-                <div style="font-size:16px" align="left">{{ content[0] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[0] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">日期:{{ time[0] }}</div>
+                <div style="font-size:12px" align="left">{{ content[0] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[0] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[1] name="2">
-                <div style="font-size:12px">日期:{{ time[1] }}</div>
-                <div style="font-size:16px" align="left">{{ content[1] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[1] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">日期:{{ time[1] }}</div>
+                <div style="font-size:12px" align="left">{{ content[1] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[1] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[2] name="3">
-                <div style="font-size:12px">日期:{{ time[2] }}</div>
-                <div style="font-size:16px" align="left">{{ content[2] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[2] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">日期:{{ time[2] }}</div>
+                <div style="font-size:12px" align="left">{{ content[2] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[2] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
 
@@ -105,73 +105,73 @@
           <el-main>
             <el-collapse v-model="activeNames" @change="handleChange">
               <el-collapse-item v-bind:title=title[1] name="2">
-                <div style="font-size:12px">日期:{{ time[1] }}</div>
-                <div style="font-size:16px" align="left">{{ content[1] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[1] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">日期:{{ time[1] }}</div>
+                <div style="font-size:12px" align="left">{{ content[1] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[1] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[3] name="4">
-                <div style="font-size:12px">日期:{{ time[3] }}</div>
-                <div style="font-size: 16px" align="left">{{ content[3] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[3] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">日期:{{ time[3] }}</div>
+                <div style="font-size: 12px" align="left">{{ content[3] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[3] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[4] name="5">
-                <div style="font-size:12px">日期:{{ time[4] }}</div>
-                <div style="font-size:16px" align="left">{{ content[4] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[4] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">日期:{{ time[4] }}</div>
+                <div style="font-size:12px" align="left">{{ content[4] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[4] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[5] name="6">
-                <div style="font-size:12px">日期:{{ time[5] }}</div>
-                <div style="font-size:16px" align="left">{{ content[5] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[5] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">日期:{{ time[5] }}</div>
+                <div style="font-size:12px" align="left">{{ content[5] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[5] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[6] name="7">
-                <div style="font-size:12px">日期:{{ time[6] }}</div>
-                <div style="font-size:16px" align="left">{{ content[6] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[6] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">日期:{{ time[6] }}</div>
+                <div style="font-size:12px" align="left">{{ content[6] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[6] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[7] name="8">
-                <div style="font-size:12px">日期:{{ time[7] }}</div>
-                <div style="font-size:16px" align="left">{{ content[7] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[7] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">日期:{{ time[7] }}</div>
+                <div style="font-size:12px" align="left">{{ content[7] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[7] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[8] name="9">
-                <div style="font-size:12px">日期:{{ time[8] }}</div>
-                <div style="font-size:16px" align="left">{{ content[8] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[8] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">日期:{{ time[8] }}</div>
+                <div style="font-size:12px" align="left">{{ content[8] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[8] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[9] name="10">
-                <div style="font-size:12px">日期:{{ time[9] }}</div>
-                <div style="font-size:16px" align="left">{{ content[9] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[9] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">日期:{{ time[9] }}</div>
+                <div style="font-size:12px" align="left">{{ content[9] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[9] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[0] name="1">
-                <div style="font-size:12px">日期:{{ time[0] }}</div>
-                <div style="font-size:16px" align="left">{{ content[0] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[0] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">日期:{{ time[0] }}</div>
+                <div style="font-size:12px" align="left">{{ content[0] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[0] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[2] name="3">
-                <div style="font-size:12px">日期:{{ time[2] }}</div>
-                <div style="font-size:16px" align="left">{{ content[2] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[2] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">日期:{{ time[2] }}</div>
+                <div style="font-size:12px" align="left">{{ content[2] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[2] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
             </el-collapse>
@@ -181,73 +181,73 @@
           <el-main>
             <el-collapse v-model="activeNames" @change="handleChange">
               <el-collapse-item v-bind:title=title[0] name="1">
-                <div style="font-size:12px">日期:{{ time[0] }}</div>
-                <div style="font-size:16px" align="left">{{ content[0] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[0] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">日期:{{ time[0] }}</div>
+                <div style="font-size:12px" align="left">{{ content[0] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[0] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[2] name="3">
-                <div style="font-size:12px">日期:{{ time[2] }}</div>
-                <div style="font-size:16px" align="left">{{ content[2] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[2] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">日期:{{ time[2] }}</div>
+                <div style="font-size:12px" align="left">{{ content[2] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[2] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[3] name="4">
-                <div style="font-size:12px">日期:{{ time[3] }}</div>
-                <div style="font-size: 16px" align="left">{{ content[3] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[3] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">日期:{{ time[3] }}</div>
+                <div style="font-size: 12px" align="left">{{ content[3] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[3] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[4] name="5">
-                <div style="font-size:12px">日期:{{ time[4] }}</div>
-                <div style="font-size:16px" align="left">{{ content[4] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[4] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">日期:{{ time[4] }}</div>
+                <div style="font-size:12px" align="left">{{ content[4] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[4] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[5] name="6">
-                <div style="font-size:12px">日期:{{ time[5] }}</div>
-                <div style="font-size:16px" align="left">{{ content[5] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[5] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">日期:{{ time[5] }}</div>
+                <div style="font-size:12px" align="left">{{ content[5] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[5] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[6] name="7">
-                <div style="font-size:12px">日期:{{ time[6] }}</div>
-                <div style="font-size:16px" align="left">{{ content[6] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[6] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">日期:{{ time[6] }}</div>
+                <div style="font-size:12px" align="left">{{ content[6] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[6] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[7] name="8">
-                <div style="font-size:12px">日期:{{ time[7] }}</div>
-                <div style="font-size:16px" align="left">{{ content[7] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[7] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">日期:{{ time[7] }}</div>
+                <div style="font-size:12px" align="left">{{ content[7] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[7] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[8] name="9">
-                <div style="font-size:12px">日期:{{ time[8] }}</div>
-                <div style="font-size:16px" align="left">{{ content[8] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[8] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">日期:{{ time[8] }}</div>
+                <div style="font-size:12px" align="left">{{ content[8] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[8] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[9] name="10">
-                <div style="font-size:12px">日期:{{ time[9] }}</div>
-                <div style="font-size:16px" align="left">{{ content[9] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[9] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">日期:{{ time[9] }}</div>
+                <div style="font-size:12px" align="left">{{ content[9] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[9] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[1] name="2">
-                <div style="font-size:12px">日期:{{ time[1] }}</div>
-                <div style="font-size:16px" align="left">{{ content[1] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[1] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">日期:{{ time[1] }}</div>
+                <div style="font-size:12px" align="left">{{ content[1] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[1] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
             </el-collapse>
@@ -257,63 +257,63 @@
           <el-main>
             <el-collapse v-model="activeNames" @change="handleChange">
               <el-collapse-item v-bind:title=title[1] name="2">
-                <div style="font-size:16px" align="left">{{ content[1] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[1] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">{{ content[1] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[1] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[2] name="3">
-                <div style="font-size:16px" align="left">{{ content[2] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[2] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">{{ content[2] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[2] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[0] name="1">
-                <div style="font-size:16px" align="left">{{ content[0] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[0] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">{{ content[0] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[0] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[3] name="4">
-                <div style="font-size:16px" align="left">{{ content[3] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[3] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">{{ content[3] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[3] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[4] name="5">
-                <div style="font-size:16px" align="left">{{ content[4] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[4] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">{{ content[4] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[4] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[5] name="6">
-                <div style="font-size:16px" align="left">{{ content[5] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[5] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">{{ content[5] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[5] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[6] name="7">
-                <div style="font-size:16px" align="left">{{ content[6] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[6] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">{{ content[6] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[6] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[7] name="8">
-                <div style="font-size:16px" align="left">{{ content[7] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[7] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">{{ content[7] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[7] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[8] name="9">
-                <div style="font-size:16px" align="left">{{ content[8] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[8] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">{{ content[8] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[8] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
               <el-collapse-item v-bind:title=title[9] name="10">
-                <div style="font-size:16px" align="left">{{ content[9] }}...</div>
-                <div>
-                  <el-link type="primary" v-bind:href=href[9] target="_blank">详情</el-link>
+                <div style="font-size:12px" align="left">{{ content[9] }}...</div>
+                <div align="left">
+                  <el-link type="primary" v-bind:href=href[9] target="_blank" align="left">详情</el-link>
                 </div>
               </el-collapse-item>
             </el-collapse>
@@ -409,5 +409,8 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+.el-collapse-item__header{
+  font-size: 18px;
+}
 </style>
