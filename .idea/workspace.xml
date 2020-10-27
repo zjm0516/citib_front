@@ -16,17 +16,17 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </select>
+    <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36cb6162-7692-4abb-b799-e0974ef507a4" name="Default Changelist" comment="" />
+    <list default="true" id="36cb6162-7692-4abb-b799-e0974ef507a4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/cibit_front/postcss.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/postcss.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cibit_front/.postcssrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/cibit_front/.postcssrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cibit_front/src/components/HomePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cibit_front/src/components/HomePage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cibit_front/src/components/Mine.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cibit_front/src/components/Mine.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cibit_front/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cibit_front/src/router/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -355,9 +355,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="147" y="64" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1603775958633" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1603776492502">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="333" y="134" key="Vcs.Push.Dialog.v2" timestamp="1603778639886">
+      <screen x="0" y="0" width="1418" height="759" />
     </state>
+    <state x="333" y="134" key="Vcs.Push.Dialog.v2/0.0.1418.759@0.0.1418.759" timestamp="1603778639886" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603776492502" />
     <state x="574" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603775929204">
       <screen x="0" y="0" width="1536" height="824" />

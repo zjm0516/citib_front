@@ -19,7 +19,7 @@ export default new Router({
     },
     {
       path: '/HomePage',
-      name: 'HomePage',
+      name: 'Homepage',
       component: HomePage
     },
     {
