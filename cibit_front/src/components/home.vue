@@ -16,10 +16,16 @@
       <el-menu-item index="3" @click="changeTorealTimeInfo">资讯</el-menu-item>
       <el-menu-item index="4" @click="changeToService">服务</el-menu-item>
       <div style="display: inline;">
-        <el-input v-model="SearchParam" placeholder="请输入查询字段" style="margin: 10px; width:300px"></el-input>
+        <el-input v-model="SearchParam" placeholder="请输入查询字段" style="margin-top: 10px; width:300px"></el-input>
         <el-button type="primary">搜索</el-button>
       </div>
-      <el-menu-item index="5"  @click="changeToMine"  class="el-icon-user-solid" style="position: absolute;left: 90%;">我的</el-menu-item>
+
+      <el-submenu index="5" @click="changeToMine"  style="float: right">
+        <!--      <el-menu-item index="5"  @click="changeToMine"  class="el-icon-user-solid" style="position: absolute;left: 90%;"></el-menu-item>-->
+        <template slot="title" >我的</template>
+        <el-menu-item @click="changeToMine" >个人中心</el-menu-item>
+        <el-menu-item @click="changeToRegister">退出登录</el-menu-item>
+      </el-submenu>
     </el-menu>
   </div>
 <!-- 搜索栏 -->
@@ -111,6 +117,9 @@ export default {
     },
     changeToMine() {
       this.$router.push({path: '/Mine'})
+    },
+    changeToRegister() {
+      this.$router.push({path: '/Regist'})
     }
   }
 }
