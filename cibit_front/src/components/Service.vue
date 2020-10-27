@@ -132,7 +132,12 @@
             },] ,
             dataZoom: [
               {
-                type: "inside"
+                type: "inside",
+                xAxisIndex: 0
+              },
+              {
+                type: "inside",
+                xAxisIndex: 1
               }
             ],
             //grid就是有几个图
@@ -162,7 +167,7 @@
                 type: "time",
                 name: "时间",
                 nameTextStyle: {
-                  padding: [-20, 20, 0, 0], // 四个数字分别为上右下左与原位置距离
+                  padding: [-20, 20, 0, -70],// 四个数字分别为上右下左与原位置距离
                   color: "#716d6d",
                   fontWeight: 400,
                   fontFamily: "Microsoft YaHei",
@@ -192,7 +197,7 @@
                 type: "time",
                 name: "时间",
                 nameTextStyle: {
-                  padding: [-20, 20, 0, -55], // 四个数字分别为上右下左与原位置距离
+                  padding: [-20, 20, 0, -70], // 四个数字分别为上右下左与原位置距离
                   color: "#716d6d",
                   fontWeight: 400,
                   fontFamily: "Microsoft YaHei",

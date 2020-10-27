@@ -55,6 +55,18 @@
         guangdongKLine:[],
         tianjinKLine:[]
       },
+      totalKLineall:{
+        shenzhenKLineall:[],
+        hubeiKLineall:[],
+        chongqingLineall:[],
+        fujianKLineall:[],
+        beijingKLineall:[],
+        shanghaiKLineall:[],
+        guangdongKLineall:[],
+        tianjinKLineall:[]
+      },
+
+
       carbonTradingNumberPiedata:[
         {value:2,name:"湖北"},
         {value:5,name:"上海"},
@@ -64,6 +76,7 @@
         {value:5,name:"天津"},
         {value:2,name:"深圳"},
         {value:5,name:"福建"}
+
       ],
       carbonTradingAmountPiedata:[
         {value:2,name:"湖北"},
@@ -85,10 +98,10 @@
     mounted(){
 
       console.log("hhek");
-      this.drawTotalKLineChart();
-      this.drawcarbonTradingeNumPieChart();
-      this.drawcarbonTradingeMountChart();
-
+      // this.drawTotalKLineChart();
+      // this.drawcarbonTradingeNumPieChart();
+      // this.drawcarbonTradingeMountChart();
+      this.getTotalKLineChartData();
       this.getcarbonTradingeAmountChartData();
       this.getcarbonTradingeNumberChartData();
       console.log("dj");
@@ -234,7 +247,7 @@
                   fontSize: 12
                 }
               },
-              data: []
+              data: this.totalKLine.hubeiKLine
             },
             {
               name: "上海",
@@ -251,7 +264,7 @@
                   fontSize: 12
                 }
               },
-              data: []
+              data:this.totalKLine.shanghaiKLine
             },
             {
               name: "北京",
@@ -268,7 +281,7 @@
                   fontSize: 12
                 }
               },
-              data: []
+              data: this.totalKLine.beijingKLine
             },
             {
               name: "重庆",
@@ -285,7 +298,7 @@
                   fontSize: 12
                 }
               },
-              data: []
+              data: this.totalKLine.chongqingLine
             },
             {
               name: "广东",
@@ -302,7 +315,7 @@
                   fontSize: 12
                 }
               },
-              data: []
+              data: this.totalKLine.guangdongKLine
             },
             {
               name: "天津",
@@ -319,7 +332,7 @@
                   fontSize: 12
                 }
               },
-              data: []
+              data: this.totalKLine.tianjinKLine
             },
             {
               name: "深圳",
@@ -336,7 +349,7 @@
                   fontSize: 12
                 }
               },
-              data: []
+              data:this.totalKLine.shenzhenKLine
             },
             {
               name: "福建",
@@ -353,17 +366,7 @@
                   fontSize: 12
                 }
               },
-              data: [
-                [1522306819000, 2],
-                [1522306919000, 1],
-                [1522307019000, 3],
-                [1522307119000, 1],
-                [1522307120000, 1],
-                [1522307230000, 1],
-                [1522302230000, 1],
-                [1522307430000, 1],
-                [1522407230000, 1]
-              ]
+              data:this.totalKLine.fujianKLine
             }
           ]
         };
@@ -447,7 +450,7 @@
                   color: "#3FBCEF",
                   fontSize: 12
                 },
-                radius : '1%',
+                radius : '40%',
                 center: ['50%', '60%'],
                 emphasis: {
                   show: true,
@@ -567,9 +570,73 @@
       {
         let that = this;
         this.$axios
-          .post("/getTotalKLineChartData", {})
+          .post("/getLineChartData", {})
           .then(function(res) {
+            that.totalKLineall.beijingKLineall=res.data.BeiJingLineChart;
+            that.totalKLineall.chongqingLineall=res.data.ChongQingLineChart;
+            that.totalKLineall.fujianKLineall=res.data.FuJianLineChart;
+            that.totalKLineall.guangdongKLineall=res.data.GuangDongLineChart;
+            that.totalKLineall.hubeiKLineall=res.data.HuBeiLineChart;
+            that.totalKLineall.shanghaiKLineall=res.data.ShangHaiLineChart;
+            that.totalKLineall.shenzhenKLineall=res.data.ShenZhenLineChart;
+            that.totalKLineall.tianjinKLineall=res.data.TianJinLineChart;
 
+            that.totalKLineall.beijingKLineall=JSON.parse(that.totalKLineall.beijingKLineall);
+            that.totalKLineall.chongqingLineall=JSON.parse(that.totalKLineall.chongqingLineall);
+            that.totalKLineall.fujianKLineall=JSON.parse(that.totalKLineall.fujianKLineall);
+            that.totalKLineall.guangdongKLineall=JSON.parse(that.totalKLineall.guangdongKLineall);
+            that.totalKLineall.hubeiKLineall=JSON.parse(that.totalKLineall.hubeiKLineall);
+            that.totalKLineall.shanghaiKLineall=JSON.parse(that.totalKLineall.shanghaiKLineall);
+            that.totalKLineall.shenzhenKLineall=JSON.parse(that.totalKLineall.shenzhenKLineall);
+            that.totalKLineall.tianjinKLineall=JSON.parse(that.totalKLineall.tianjinKLineall);
+            console.log(that.totalKLineall.shenzhenKLineall);
+
+
+
+            for (var i=0;i<that.totalKLineall.beijingKLineall.length;i++)
+            {
+              var bj=[that.totalKLineall.beijingKLineall[i].indate,that.totalKLineall.beijingKLineall[i].deal];
+              that.totalKLine.beijingKLine.push(bj);
+
+            }
+            for(var i=0;i<that.totalKLineall.chongqingLineall.length;i++)
+            {
+              var cq=[that.totalKLineall.chongqingLineall[i].indate,that.totalKLineall.chongqingLineall[i].deal];
+              that.totalKLine.chongqingLine.push(cq);
+            }
+            for(var i=0;i<that.totalKLineall.fujianKLineall.length;i++)
+            {
+              var fj=[that.totalKLineall.fujianKLineall[i].indate,that.totalKLineall.fujianKLineall[i].deal];
+              that.totalKLine.fujianKLine.push(fj);
+            }
+            for(var i=0;i<that.totalKLineall.guangdongKLineall.length;i++)
+            {
+              var gd=[that.totalKLineall.guangdongKLineall[i].indate,that.totalKLineall.guangdongKLineall[i].deal];
+              that.totalKLine.guangdongKLine.push(gd);
+            }
+            for(var i=0;i<that.totalKLineall.hubeiKLineall.length;i++)
+            {
+              var hb=[that.totalKLineall.hubeiKLineall[i].indate,that.totalKLineall.hubeiKLineall[i].deal];
+              that.totalKLine.hubeiKLine.push(hb);
+            }
+            for(var i=0;i<that.totalKLineall.shanghaiKLineall.length;i++)
+            {
+
+              var sh=[that.totalKLineall.shanghaiKLineall[i].indate,that.totalKLineall.shanghaiKLineall[i].deal];
+              that.totalKLine.shanghaiKLine.push(sh);
+            }
+            for(var i=0;i<that.totalKLineall.shenzhenKLineall.length;i++)
+            {
+              var sz=[that.totalKLineall.shenzhenKLineall[i].indate,that.totalKLineall.shenzhenKLineall[i].deal];
+              that.totalKLine.shenzhenKLine.push(sz);
+            }
+            for (var i=0;i<that.totalKLineall.tianjinKLineall.length;i++)
+            {
+              var tj=[that.totalKLineall.tianjinKLineall[i].indate,that.totalKLineall.tianjinKLineall[i].deal];
+              that.totalKLine.tianjinKLine.push(tj);
+            }
+
+            // console.log(that.totalKLine.tianjinKLine);
            that.drawTotalKLineChart();
 
           })
@@ -582,6 +649,12 @@
         this.$axios
           .post("/getcarbonTradingeNumberChartData", {value:"1"})
           .then(function(res) {
+            for(var  i=0;i<res.data.length;i++)
+            {
+              that.carbonTradingNumberPiedata[i].value=(res.data[i].value/10000).toFixed(1);
+              that.carbonTradingNumberPiedata[i].name=res.data[i].city;
+            }
+
             that.drawcarbonTradingeNumPieChart();
           })
           .catch(function(error) {
@@ -593,7 +666,14 @@
         this.$axios
           .post("/getcarbonTradingeAmountChartData", {value:"1"})
           .then(function(res) {
-            that.drawcarbonTradingeNumPieChart();
+            for(var  i=0;i<res.data.length;i++)
+            {
+
+
+              that.carbonTradingAmountPiedata[i].value=(res.data[i].value/10000).toFixed(1);
+              that.carbonTradingAmountPiedata[i].name=res.data[i].city;
+            }
+            that.drawcarbonTradingeMountChart();
           })
           .catch(function(error) {
             console.log(error);
