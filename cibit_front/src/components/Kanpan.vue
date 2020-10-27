@@ -25,13 +25,25 @@
     <el-container>
       <el-aside width="70%" style="background-color: black">
 <!--//下面的一个div就是图线-->
-                <div class="totalKLine" id="totalKLineChart" ></div>
+                <div v-loading="loading1"
+                     element-loading-text="拼命加载中"
+                     element-loading-spinner="el-icon-loading"
+                     element-loading-background="rgba(0, 0, 0, 0.8)"
+                     class="totalKLine" id="totalKLineChart" ></div>
       </el-aside>
 
       <el-main style=" height:900px;background-color: black">
 <!--//下面画两个饼状图-->
-        <div class="carbonTradingeNum" id="carbonTradingeNumPieChart" ></div>
-        <div class="carbonTradingeMount" id="carbonTradingeMountChart" ></div>
+        <div
+          v-loading="loading2"
+          element-loading-text="拼命加载中"
+          element-loading-spinner="el-icon-loading"
+          element-loading-background="rgba(0, 0, 0, 0.8)" class="carbonTradingeNum" id="carbonTradingeNumPieChart" ></div>
+        <div
+          v-loading="loading3"
+          element-loading-text="拼命加载中"
+          element-loading-spinner="el-icon-loading"
+          element-loading-background="rgba(0, 0, 0, 0.8)" class="carbonTradingeMount" id="carbonTradingeMountChart" ></div>
 
 
       </el-main>
@@ -45,6 +57,7 @@
         name: "Kanpan",
      data(){
     return{
+
       totalKLine:{
         shenzhenKLine:[],
         hubeiKLine:[],
@@ -91,6 +104,9 @@
 
       activeIndex: '1',
       activeIndex2: '1',
+      loading1:true,
+      loading2:true,
+      loading3:true,
     }
 
     },
@@ -143,6 +159,9 @@
             }
           },
           //legend是图例，就是一个有几条线
+
+
+
           legend: {
             data: ["湖北","上海","北京","重庆","广东","天津","深圳","福建"],
             orient: "horizontal",
@@ -154,6 +173,7 @@
               color: "#a7a2a2"
             }
           },
+
           //grid就是有几个图
           grid: {
             left: "2%",
@@ -230,12 +250,20 @@
             },
             boundaryGap: [0, 0.01]
           },
-          color: ["#E6E415", "#F353C0"],
 
+          color:["#e51717","#f0ad4e","#d91192","#9511d9","#11bdd9","#26d911","#0ee5c7","#e2e50e"],
           series: [
             {
               name: "湖北",
               type: "line",
+              symbol: "none",
+              smooth:1,
+              sampling:"average",
+              lineStyle: {
+                normal: {
+                  color:"#e51717"
+                }
+              },
               label: {
                 show: false, // 开启显示
                 position: "top", // 在上方显示
@@ -252,7 +280,14 @@
             {
               name: "上海",
               type: "line",
-
+              symbol: "none",
+              smooth:1,
+              sampling:"average",
+              lineStyle: {
+                normal: {
+                  color:"#f0ad4e"
+                }
+              },
               label: {
                 show: false, // 开启显示
                 position: "top", // 在上方显示
@@ -269,7 +304,14 @@
             {
               name: "北京",
               type: "line",
-
+              symbol: "none",
+              smooth:1,
+              sampling:"average",
+              lineStyle: {
+                normal: {
+                  color:"#d91192"
+                }
+              },
               label: {
                 show: false, // 开启显示
                 position: "top", // 在上方显示
@@ -286,7 +328,14 @@
             {
               name: "重庆",
               type: "line",
-
+              symbol: "none",
+              smooth:1,
+              sampling:"average",
+              lineStyle: {
+                normal: {
+                  color:"#9511d9"
+                }
+              },
               label: {
                 show: false, // 开启显示
                 position: "top", // 在上方显示
@@ -303,7 +352,14 @@
             {
               name: "广东",
               type: "line",
-
+              symbol: "none",
+              smooth:1,
+              sampling:"average",
+              lineStyle: {
+                normal: {
+                  color:"#11bdd9"
+                }
+              },
               label: {
                 show: false, // 开启显示
                 position: "top", // 在上方显示
@@ -320,7 +376,14 @@
             {
               name: "天津",
               type: "line",
-
+              symbol: "none",
+              smooth:1,
+              sampling:"average",
+              lineStyle: {
+                normal: {
+                  color:"#26d911"
+                }
+              },
               label: {
                 show: false, // 开启显示
                 position: "top", // 在上方显示
@@ -337,7 +400,14 @@
             {
               name: "深圳",
               type: "line",
-
+              symbol: "none",
+              smooth:1,
+              sampling:"average",
+              lineStyle: {
+                normal: {
+                  color:"#0ee5c7"
+                }
+              },
               label: {
                 show: false, // 开启显示
                 position: "top", // 在上方显示
@@ -354,7 +424,14 @@
             {
               name: "福建",
               type: "line",
-
+              symbol: "none",
+              smooth:1,
+              sampling:"average",
+              lineStyle: {
+                normal: {
+                  color:"#e2e50e"
+                }
+              },
               label: {
                 show: false, // 开启显示
                 position: "top", // 在上方显示
@@ -628,6 +705,10 @@
             for(var i=0;i<that.totalKLineall.shenzhenKLineall.length;i++)
             {
               var sz=[that.totalKLineall.shenzhenKLineall[i].indate,that.totalKLineall.shenzhenKLineall[i].deal];
+              if(that.totalKLineall.shenzhenKLineall[i].deal==0)
+              {
+                continue;
+              }
               that.totalKLine.shenzhenKLine.push(sz);
             }
             for (var i=0;i<that.totalKLineall.tianjinKLineall.length;i++)
@@ -638,6 +719,7 @@
 
             // console.log(that.totalKLine.tianjinKLine);
            that.drawTotalKLineChart();
+            that.loading1=false;
 
           })
           .catch(function(error) {
@@ -656,6 +738,7 @@
             }
 
             that.drawcarbonTradingeNumPieChart();
+            that.loading2=false;
           })
           .catch(function(error) {
             console.log(error);
@@ -674,6 +757,7 @@
               that.carbonTradingAmountPiedata[i].name=res.data[i].city;
             }
             that.drawcarbonTradingeMountChart();
+            that.loading3=false;
           })
           .catch(function(error) {
             console.log(error);

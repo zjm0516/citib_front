@@ -32,9 +32,9 @@
         else {
           this.$axios.post("/login", {username: this.username, password: this.password})
             .then(res =>{
-              if (res.result) {
+              if (res.data.success) {
                 this.$message.success("登陆成功");
-                this.$router.push({path: '/'});
+                this.$router.push({path: '/home'});
               } else {
                 this.$message.error({
                   message: res.message,

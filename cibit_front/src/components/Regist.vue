@@ -54,6 +54,22 @@
             {
               this.$axios.post("/regist",{username:this.username,password:this.password})
                 .then(res=>{
+                  if(res.data.success)
+                  {
+                    this.$message({
+                      showClose: true,
+                      message: res.msg,
+                      type: 'success'
+                    });
+                    this.$router.push("/")
+                  }
+                  else {
+                    this.$message({
+                      showClose: true,
+                      message: res.msg,
+                      type: 'error'
+                    });
+                  }
 
                 })
                 .catch(function (error) {

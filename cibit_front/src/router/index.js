@@ -13,7 +13,7 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path:'/',
+      path:'/home',
       name:'home',
       component: home
     },
@@ -33,7 +33,7 @@ export default new Router({
       component: Kanpan
     },
     {
-      path: '/Login',
+      path: '/',
       name: 'Login',
       component: Login
     },
